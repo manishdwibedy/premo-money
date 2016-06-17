@@ -36,17 +36,27 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 if(textField.text!.characters.count <= 0){
                     self.showAlert("Missing Name", message: "Please enter your full name!")
                 }
+                else if(textField.text!.characters.count <= 3){
+                    self.showAlert("Invalid Name", message: "Please enter more characters!")
+                }
                 break
             case 1:
                 print("Username : " + textField.text!)
                 if(textField.text!.characters.count <= 0){
                     self.showAlert("Missing Username", message: "Please enter your username!")
                 }
+                else if(textField.text!.characters.count <= 5){
+                    self.showAlert("Invalid Username", message: "Please enter more characters!")
+                }
                 break
             case 2:
                 print("Password : " + textField.text!)
                 if(textField.text!.characters.count <= 0){
                     self.showAlert("Missing Password", message: "Please enter your password!")
+                }
+                    
+                else if(textField.text!.characters.count <= 8){
+                    self.showAlert("Invalid Password", message: "Please enter more characters!")
                 }
                 break
             default:
