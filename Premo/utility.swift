@@ -31,4 +31,8 @@ class Util{
         return hash.toHexString()
     }
     
+    static func getDeviceID() -> String{
+        return UIDevice.currentDevice().identifierForVendor!.UUIDString
+    }
+    
 }
