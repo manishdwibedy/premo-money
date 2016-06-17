@@ -11,18 +11,29 @@ import FBSDKLoginKit
 
 class ViewController: UIViewController {
 
+    let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+    var userLogged: Bool = false
+    
+    @IBOutlet weak var loginButton: UIButton!
+    
     @IBAction func facebookLogin(sender: AnyObject) {
-        var fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
-        fbLoginManager .logInWithReadPermissions(["email"], handler: { (result, error) -> Void in
-            if (error == nil){
-                var fbloginresult : FBSDKLoginManagerLoginResult = result
-                if(fbloginresult.grantedPermissions.contains("email"))
-                {
-                    self.getFBUserData()
-                    fbLoginManager.logOut()
+        if (!userLogged){
+            fbLoginManager .logInWithReadPermissions(["email"], handler: { (result, error) -> Void in
+                if (error == nil){
+                    let fbloginresult : FBSDKLoginManagerLoginResult = result
+                    if(fbloginresult.grantedPermissions.contains("email"))
+                    {
+                        self.getFBUserData()
+                        self.userLogged = true
+                        self.loginButton.setTitle("Logout?", forState: UIControlState.Normal)
+                    }
                 }
-            }
-        })
+            })
+        }
+        else{
+            self.fbLoginManager.logOut()
+        }
+        
     }
     
     func getFBUserData(){
