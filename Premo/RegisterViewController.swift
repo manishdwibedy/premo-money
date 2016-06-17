@@ -30,22 +30,38 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBAction func register(sender: AnyObject) {
     }
     
-    func textFieldShouldEndEditing(textField: UITextField) -> Bool {  //delegate method
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        print(textField.text!.characters.count)
         switch textField.tag {
             case 0:
                 print("Name : " + textField.text!)
+                if(textField.text!.characters.count <= 0){
+                    self.showAlert("Missing Name", message: "Please enter your full name!")
+                }
                 break
             case 1:
                 print("Username : " + textField.text!)
+                if(textField.text!.characters.count <= 0){
+                    self.showAlert("Missing Username", message: "Please enter your username!")
+                }
                 break
             case 2:
                 print("Password : " + textField.text!)
+                if(textField.text!.characters.count <= 0){
+                    self.showAlert("Missing Password", message: "Please enter your password!")
+                }
                 break
             default:
                 print("Error!")
         }
         print(textField.text)
         return true
+    }
+    
+    func showAlert(title: String, message: String){
+        let alertView = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        alertView.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        presentViewController(alertView, animated: true, completion: nil)
     }
     
     /*
