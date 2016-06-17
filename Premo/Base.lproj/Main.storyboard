@@ -120,7 +120,7 @@
         <!--Registration-->
         <scene sceneID="s4P-LK-FAS">
             <objects>
-                <viewController title="Registration" id="42M-Sy-6XM" sceneMemberID="viewController">
+                <viewController title="Registration" id="42M-Sy-6XM" customClass="RegisterViewController" customModule="Premo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T8Y-9O-A8s"/>
                         <viewControllerLayoutGuide type="bottom" id="1oq-xO-eUG"/>
@@ -154,6 +154,9 @@
                                     <constraint firstAttribute="height" constant="30" id="vx0-aK-2xp"/>
                                 </constraints>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="register:" destination="42M-Sy-6XM" eventType="touchUpInside" id="kXb-P4-kTC"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sp8-Dl-UCB">
                                 <rect key="frame" x="20" y="169" width="335" height="30"/>
@@ -181,6 +184,11 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="fullName" destination="MzE-c4-2i5" id="78y-hU-TWK"/>
+                        <outlet property="password" destination="8wf-3e-OY1" id="jf7-wn-zqh"/>
+                        <outlet property="username" destination="sp8-Dl-UCB" id="z5A-V2-1GN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0Z-MZ-199" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
