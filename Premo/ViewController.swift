@@ -53,12 +53,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
-        
-//        let loginButton = FBSDKLoginButton()
-//        loginButton.center = view.center
-//        view.addSubview(loginButton)
-        
         self.username.delegate = self
         self.password.delegate = self
         
