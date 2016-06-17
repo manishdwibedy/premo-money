@@ -39,6 +39,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 else if(textField.text!.characters.count <= 3){
                     self.showAlert("Invalid Name", message: "Please enter more characters!")
                 }
+                else if textField.text!.rangeOfString(" ") != nil{
+                    self.showAlert("Invalid Full Name", message: "Please enter your first and last name!")
+                }
                 break
             case 1:
                 print("Username : " + textField.text!)
@@ -54,9 +57,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 if(textField.text!.characters.count <= 0){
                     self.showAlert("Missing Password", message: "Please enter your password!")
                 }
-                    
                 else if(textField.text!.characters.count <= 8){
                     self.showAlert("Invalid Password", message: "Please enter more characters!")
+                }
+                else if(!self.checkPasswordStrength(textField.text!)){
+                    self.showAlert("Invalid Password", message: "Please enter capitals/numberic/special symbols!")
                 }
                 break
             default:
@@ -78,6 +83,19 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         let alertView = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         alertView.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         presentViewController(alertView, animated: true, completion: nil)
+    }
+    
+    func checkPasswordStrength(password: String) -> Bool{
+        let capitalTest = NSPredicate(format:"SELF MATCHES %@", ".*[A-Z]+.*")
+        let numberTest = NSPredicate(format:"SELF MATCHES %@", ".*[0-9]+.*")
+        let specialTest = NSPredicate(format:"SELF MATCHES %@", ".*[!&^%$#@()/]+.*")
+        
+        
+        let capitalresult = capitalTest.evaluateWithObject(password)
+        let numberresult = numberTest.evaluateWithObject(password)
+        let specialresult = specialTest.evaluateWithObject(password)
+        
+        return capitalresult && numberresult && specialresult
     }
     
     /*
