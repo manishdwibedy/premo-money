@@ -27,8 +27,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func register(sender: AnyObject) {
-    }
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
         print(textField.text!.characters.count)
@@ -56,6 +54,14 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
         print(textField.text)
         return true
+    }
+    
+    @IBAction func register(sender: AnyObject) {
+        let fullname = self.fullName.text!
+        let username = self.username.text!
+        let password = self.password.text!
+        
+        
     }
     
     func showAlert(title: String, message: String){
