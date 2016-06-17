@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -25,29 +24,22 @@
                                     <action selector="facebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nHr-W9-Ffv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Facebook Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rht-qa-aTW">
-                                <rect key="frame" x="20" y="200" width="335" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="A6f-zW-K5D"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jP4-28-kkh">
+                                <rect key="frame" x="20" y="28" width="335" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9PQ-cz-2Zt" firstAttribute="top" secondItem="rht-qa-aTW" secondAttribute="bottom" constant="100" id="2pu-vv-PUO"/>
                             <constraint firstItem="9PQ-cz-2Zt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3gr-4F-kTi"/>
-                            <constraint firstItem="rht-qa-aTW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4Ut-8b-aPH"/>
                             <constraint firstItem="9PQ-cz-2Zt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9FN-Bg-qFX"/>
-                            <constraint firstItem="rht-qa-aTW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iHZ-cf-8OX"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="loginButton" destination="9PQ-cz-2Zt" id="ndM-Nr-qdn"/>
-                        <outlet property="userLabel" destination="rht-qa-aTW" id="reI-T6-MHu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
