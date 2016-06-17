@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         }
         else{
             self.fbLoginManager.logOut()
-            self.userLabel.text = "Facebook Login"
+            //self.userLabel.text = "Facebook Login"
             self.loginButton.setTitle("Facebook Login", forState: UIControlState.Normal)
             self.userLogged = false
         }
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){
                     let username = result["name"]!
-                    self.userLabel.text = String(username!)
+                    //self.userLabel.text = String(username!)
                     print(username)
                 }
             })
