@@ -9,7 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
     var userLogged: Bool = false
@@ -58,6 +58,11 @@ class ViewController: UIViewController {
 //        let loginButton = FBSDKLoginButton()
 //        loginButton.center = view.center
 //        view.addSubview(loginButton)
+        
+        self.username.delegate = self
+        self.password.delegate = self
+        
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,9 +71,9 @@ class ViewController: UIViewController {
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        self.view.endEditing(true)
-        return false
+        username.resignFirstResponder()
+        password.resignFirstResponder()
+        return true
     }
     
     @IBOutlet weak var username: UITextField!
