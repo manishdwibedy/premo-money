@@ -76,6 +76,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         let username = self.username.text!
         let password = self.password.text!
         
+        let hashedPassword = Util.hash(password)
+        print(hashedPassword)
+        let salt = "YQeF7wSdbk1Vbfp79umh"
+        let saltedPassword = Util.hash(hashedPassword + salt)
+        print(saltedPassword)
         
     }
     
