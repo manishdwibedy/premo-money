@@ -31,6 +31,14 @@ class Util{
         return hash.toHexString()
     }
     
+    static func salt(data: String) -> String{
+        let hashed = Util.hash(data)
+        let salt = "YQeF7wSdbk1Vbfp79umh"
+        let saltedPassword = Util.hash(hashed + salt)
+        
+        return saltedPassword
+    }
+    
     static func getDeviceID() -> String{
         return UIDevice.currentDevice().identifierForVendor!.UUIDString
     }
