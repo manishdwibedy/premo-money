@@ -31,8 +31,20 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {  //delegate method
+        switch textField.tag {
+            case 0:
+                print("Name : " + textField.text!)
+                break
+            case 1:
+                print("Username : " + textField.text!)
+                break
+            case 2:
+                print("Password : " + textField.text!)
+                break
+            default:
+                print("Error!")
+        }
         print(textField.text)
-        
         return true
     }
     
