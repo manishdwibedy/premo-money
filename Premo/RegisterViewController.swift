@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var fullName: UITextField!
     @IBOutlet weak var username: UITextField!
@@ -17,6 +17,9 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        fullName.delegate = self
+        username.delegate = self
+        password.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +29,13 @@ class RegisterViewController: UIViewController {
     
     @IBAction func register(sender: AnyObject) {
     }
-
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {  //delegate method
+        print(textField.text)
+        
+        return true
+    }
+    
     /*
     // MARK: - Navigation
 
