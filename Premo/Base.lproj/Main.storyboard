@@ -47,6 +47,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTE-GS-yi6">
                                 <rect key="frame" x="16" y="258" width="343" height="30"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rjh-hx-jKT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7r-cI-QiH">
                                 <rect key="frame" x="17" y="338" width="342" height="30"/>
@@ -103,6 +106,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="loginButton" destination="9PQ-cz-2Zt" id="ndM-Nr-qdn"/>
+                        <outlet property="password" destination="0Mh-xS-b1A" id="FdO-hJ-XNZ"/>
+                        <outlet property="username" destination="04E-yN-sc2" id="rz4-E1-vXr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

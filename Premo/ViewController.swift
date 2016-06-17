@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var userLabel: UILabel!
     
     @IBOutlet weak var loginButton: UIButton!
-    
     @IBAction func facebookLogin(sender: AnyObject) {
         if (!userLogged){
             fbLoginManager .logInWithReadPermissions(["email"], handler: { (result, error) -> Void in
@@ -46,7 +45,7 @@ class ViewController: UIViewController {
                 if (error == nil){
                     let username = result["name"]!
                     self.userLabel.text = String(username!)
-                    print(result)
+                    print(username)
                 }
             })
         }
@@ -65,7 +64,19 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        self.view.endEditing(true)
+        return false
+    }
+    
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var password: UITextField!
+    
 
+    @IBAction func login(sender: AnyObject) {
+    }
 
 }
 
