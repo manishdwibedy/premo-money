@@ -47,6 +47,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="loginButton" destination="9PQ-cz-2Zt" id="ndM-Nr-qdn"/>
+                        <outlet property="userLabel" destination="rht-qa-aTW" id="reI-T6-MHu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

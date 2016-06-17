@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
     var userLogged: Bool = false
+    @IBOutlet weak var userLabel: UILabel!
     
     @IBOutlet weak var loginButton: UIButton!
     
@@ -40,6 +41,8 @@ class ViewController: UIViewController {
         if((FBSDKAccessToken.currentAccessToken()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){
+                    let username = result["name"]!
+                    self.userLabel.text = String(username!)
                     print(result)
                 }
             })
