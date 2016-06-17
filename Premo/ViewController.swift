@@ -115,6 +115,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func login(sender: AnyObject) {
         let username = self.username.text!
         let password = self.password.text!
+        
+        print(Util.hash(password))
+        print(Util.hash(username))
 
     }
 

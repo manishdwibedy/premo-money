@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CryptoSwift
 
 class Util{
     static func checkPasswordStrength(password: String) -> Bool{
@@ -23,5 +24,11 @@ class Util{
         return capitalresult && numberresult && specialresult
     }
 
+    static func hash(data: String) -> String {
+        let bytes = data.utf8.map({$0})
+        let hash = bytes.sha512()
+        
+        return hash.toHexString()
+    }
     
 }
