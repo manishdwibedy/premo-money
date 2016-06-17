@@ -33,6 +33,9 @@ class ViewController: UIViewController {
         }
         else{
             self.fbLoginManager.logOut()
+            self.userLabel.text = "Facebook Login"
+            self.loginButton.setTitle("Facebook Login", forState: UIControlState.Normal)
+            self.userLogged = false
         }
         
     }
