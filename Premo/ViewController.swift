@@ -75,8 +75,47 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        print(textField.text!.characters.count)
+        switch textField.tag {
+        case 0:
+            print("Username : " + textField.text!)
+            if(textField.text!.characters.count <= 0){
+                self.showAlert("Missing Username", message: "Please enter your username!")
+            }
+            else if(textField.text!.characters.count <= 5){
+                self.showAlert("Invalid Username", message: "Please enter more characters!")
+            }
+            break
+        case 1:
+            print("Password : " + textField.text!)
+            if(textField.text!.characters.count <= 0){
+                self.showAlert("Missing Password", message: "Please enter your password!")
+            }
+            else if(textField.text!.characters.count <= 8){
+                self.showAlert("Invalid Password", message: "Please enter more characters!")
+            }
+            else if(!Util.checkPasswordStrength(textField.text!)){
+                self.showAlert("Invalid Password", message: "Please enter capitals/numberic/special symbols!")
+            }
+            break
+        default:
+            print("Error!")
+        }
+        print(textField.text)
+        return true
+    }
+    
+    func showAlert(title: String, message: String){
+        let alertView = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        alertView.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        presentViewController(alertView, animated: true, completion: nil)
+    }
 
     @IBAction func login(sender: AnyObject) {
+        let username = self.username.text!
+        let password = self.password.text!
+
     }
 
 }

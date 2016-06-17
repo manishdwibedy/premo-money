@@ -60,7 +60,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 else if(textField.text!.characters.count <= 8){
                     self.showAlert("Invalid Password", message: "Please enter more characters!")
                 }
-                else if(!self.checkPasswordStrength(textField.text!)){
+                else if(!Util.checkPasswordStrength(textField.text!)){
                     self.showAlert("Invalid Password", message: "Please enter capitals/numberic/special symbols!")
                 }
                 break
@@ -85,19 +85,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         presentViewController(alertView, animated: true, completion: nil)
     }
     
-    func checkPasswordStrength(password: String) -> Bool{
-        let capitalTest = NSPredicate(format:"SELF MATCHES %@", ".*[A-Z]+.*")
-        let numberTest = NSPredicate(format:"SELF MATCHES %@", ".*[0-9]+.*")
-        let specialTest = NSPredicate(format:"SELF MATCHES %@", ".*[!&^%$#@()/]+.*")
         
-        
-        let capitalresult = capitalTest.evaluateWithObject(password)
-        let numberresult = numberTest.evaluateWithObject(password)
-        let specialresult = specialTest.evaluateWithObject(password)
-        
-        return capitalresult && numberresult && specialresult
-    }
-    
     /*
     // MARK: - Navigation
 

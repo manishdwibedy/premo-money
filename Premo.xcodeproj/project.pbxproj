@@ -16,6 +16,7 @@
 		5B04EC991D14833700FE6C72 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B04EC961D14833700FE6C72 /* FBSDKLoginKit.framework */; };
 		5B04EC9A1D14833700FE6C72 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B04EC971D14833700FE6C72 /* FBSDKShareKit.framework */; };
 		5B04EC9D1D14940300FE6C72 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04EC9C1D14940300FE6C72 /* RegisterViewController.swift */; };
+		5B04EC9F1D14B74600FE6C72 /* utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04EC9E1D14B74600FE6C72 /* utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5B04EC961D14833700FE6C72 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		5B04EC971D14833700FE6C72 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		5B04EC9C1D14940300FE6C72 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		5B04EC9E1D14B74600FE6C72 /* utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +68,14 @@
 			isa = PBXGroup;
 			children = (
 				5B04EC7B1D14811900FE6C72 /* AppDelegate.swift */,
-				5B04EC7D1D14811900FE6C72 /* ViewController.swift */,
 				5B04EC7F1D14811900FE6C72 /* Main.storyboard */,
+				5B04EC7D1D14811900FE6C72 /* ViewController.swift */,
 				5B04EC9C1D14940300FE6C72 /* RegisterViewController.swift */,
 				5B04EC821D14811900FE6C72 /* Assets.xcassets */,
 				5B04EC841D14811900FE6C72 /* LaunchScreen.storyboard */,
 				5B04EC871D14811900FE6C72 /* Info.plist */,
 				5B04EC9B1D14834600FE6C72 /* Frameworks */,
+				5B04EC9E1D14B74600FE6C72 /* utility.swift */,
 			);
 			path = Premo;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B04EC9F1D14B74600FE6C72 /* utility.swift in Sources */,
 				5B04EC9D1D14940300FE6C72 /* RegisterViewController.swift in Sources */,
 				5B04EC7E1D14811900FE6C72 /* ViewController.swift in Sources */,
 				5B04EC7C1D14811900FE6C72 /* AppDelegate.swift in Sources */,
