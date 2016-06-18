@@ -146,14 +146,27 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aN-yI-qTs">
+                                <rect key="frame" x="20" y="200" width="335" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="RHL-oe-gWF"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eCX-CE-UpO" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" id="DON-JJ-HHg"/>
                             <constraint firstItem="eCX-CE-UpO" firstAttribute="top" secondItem="nvV-n4-V4k" secondAttribute="bottom" constant="20" id="FzL-FT-wK5"/>
+                            <constraint firstItem="8aN-yI-qTs" firstAttribute="top" secondItem="eCX-CE-UpO" secondAttribute="bottom" constant="10" id="INY-88-IZj"/>
                             <constraint firstItem="eCX-CE-UpO" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="OCI-YD-je4"/>
                             <constraint firstItem="nvV-n4-V4k" firstAttribute="top" secondItem="RXZ-Q3-kZy" secondAttribute="bottom" constant="20" id="gvR-7q-Z5M"/>
                             <constraint firstItem="nvV-n4-V4k" firstAttribute="centerX" secondItem="84z-wQ-6oh" secondAttribute="centerX" id="jNl-Id-A9g"/>
+                            <constraint firstItem="8aN-yI-qTs" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" id="mfO-5J-hqW"/>
+                            <constraint firstItem="8aN-yI-qTs" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="q00-K5-q8g"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
