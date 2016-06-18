@@ -21,12 +21,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
             fbLoginManager .logInWithReadPermissions(["email"], handler: { (result, error) -> Void in
                 if (error == nil){
                     let fbloginresult : FBSDKLoginManagerLoginResult = result
-                    if(fbloginresult.grantedPermissions.contains("email"))
-                    {
-                        self.getFBUserData()
-                        self.userLogged = true
-                        self.loginButton.setTitle("Logout?", forState: UIControlState.Normal)
+                    if(fbloginresult.isCancelled){
+                        self.showAlert("Facebook Login Error", message: "Could not login using Facebook!")
                     }
+                    else{
+                        if(fbloginresult.grantedPermissions.contains("email"))
+                        {
+                            self.getFBUserData()
+                            self.userLogged = true
+                            self.loginButton.setTitle("Logout?", forState: UIControlState.Normal)
+                        }
+                    }
+                    
+                    
                 }
             })
         }
