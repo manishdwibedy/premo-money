@@ -131,10 +131,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dummy-user" translatesAutoresizingMaskIntoConstraints="NO" id="nvV-n4-V4k">
-                                <rect key="frame" x="137" y="46" width="100" height="100"/>
+                                <rect key="frame" x="137" y="46" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="ZWw-eJ-11w"/>
-                                    <constraint firstAttribute="height" constant="100" id="pCf-kR-95I"/>
+                                    <constraint firstAttribute="height" constant="60" id="pCf-kR-95I"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCX-CE-UpO">
@@ -160,7 +160,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eCX-CE-UpO" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" id="DON-JJ-HHg"/>
-                            <constraint firstItem="eCX-CE-UpO" firstAttribute="top" secondItem="nvV-n4-V4k" secondAttribute="bottom" constant="20" id="FzL-FT-wK5"/>
+                            <constraint firstItem="eCX-CE-UpO" firstAttribute="top" secondItem="nvV-n4-V4k" secondAttribute="bottom" constant="40" id="FzL-FT-wK5"/>
                             <constraint firstItem="8aN-yI-qTs" firstAttribute="top" secondItem="eCX-CE-UpO" secondAttribute="bottom" constant="10" id="INY-88-IZj"/>
                             <constraint firstItem="eCX-CE-UpO" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="OCI-YD-je4"/>
                             <constraint firstItem="nvV-n4-V4k" firstAttribute="top" secondItem="RXZ-Q3-kZy" secondAttribute="bottom" constant="20" id="gvR-7q-Z5M"/>
