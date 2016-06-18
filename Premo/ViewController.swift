@@ -125,8 +125,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         print(Util.hash(password))
         print(Util.hash(username))
-
+        
+        performSegueWithIdentifier("showHomePage", sender: sender)
     }
+    
+    
 
 }
 
