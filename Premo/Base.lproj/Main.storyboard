@@ -49,6 +49,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rjh-hx-jKT"/>
+                                    <segue destination="A5A-e5-Meq" kind="showDetail" id="H2d-us-8Y5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7r-cI-QiH">
@@ -116,6 +117,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="244.5" y="281.5"/>
+        </scene>
+        <!--Home Page-->
+        <scene sceneID="rhn-YD-eG7">
+            <objects>
+                <viewController title="Home Page" id="A5A-e5-Meq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RXZ-Q3-kZy"/>
+                        <viewControllerLayoutGuide type="bottom" id="AeI-J8-0gF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="84z-wQ-6oh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEm-h7-9on" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810.5" y="-43.5"/>
         </scene>
         <!--Registration-->
         <scene sceneID="s4P-LK-FAS">
@@ -192,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0Z-MZ-199" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700.5" y="281.5"/>
+            <point key="canvasLocation" x="810.5" y="691.5"/>
         </scene>
     </scenes>
 </document>

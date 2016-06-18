@@ -17,6 +17,7 @@
 		5B04EC9A1D14833700FE6C72 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B04EC971D14833700FE6C72 /* FBSDKShareKit.framework */; };
 		5B04EC9D1D14940300FE6C72 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04EC9C1D14940300FE6C72 /* RegisterViewController.swift */; };
 		5B04EC9F1D14B74600FE6C72 /* utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04EC9E1D14B74600FE6C72 /* utility.swift */; };
+		5B24B8871D14DC1A0026CF67 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B24B8861D14DC1A0026CF67 /* HomePageViewController.swift */; };
 		BDD977FB07C3ECDD2A38393E /* Pods_Premo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6848F403B6249BF17C4BCF /* Pods_Premo.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		5B04EC971D14833700FE6C72 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		5B04EC9C1D14940300FE6C72 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5B04EC9E1D14B74600FE6C72 /* utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utility.swift; sourceTree = "<group>"; };
+		5B24B8861D14DC1A0026CF67 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		DA6848F403B6249BF17C4BCF /* Pods_Premo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Premo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 			children = (
 				5B04EC7B1D14811900FE6C72 /* AppDelegate.swift */,
 				5B04EC7F1D14811900FE6C72 /* Main.storyboard */,
+				5B24B8861D14DC1A0026CF67 /* HomePageViewController.swift */,
 				5B04EC7D1D14811900FE6C72 /* ViewController.swift */,
 				5B04EC9C1D14940300FE6C72 /* RegisterViewController.swift */,
 				5B04EC821D14811900FE6C72 /* Assets.xcassets */,
@@ -239,6 +242,7 @@
 				5B04EC9F1D14B74600FE6C72 /* utility.swift in Sources */,
 				5B04EC9D1D14940300FE6C72 /* RegisterViewController.swift in Sources */,
 				5B04EC7E1D14811900FE6C72 /* ViewController.swift in Sources */,
+				5B24B8871D14DC1A0026CF67 /* HomePageViewController.swift in Sources */,
 				5B04EC7C1D14811900FE6C72 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
