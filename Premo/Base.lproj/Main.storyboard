@@ -137,9 +137,21 @@
                                     <constraint firstAttribute="height" constant="100" id="pCf-kR-95I"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCX-CE-UpO">
+                                <rect key="frame" x="20" y="165" width="335" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="LeE-lU-nRP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eCX-CE-UpO" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" id="DON-JJ-HHg"/>
+                            <constraint firstItem="eCX-CE-UpO" firstAttribute="top" secondItem="nvV-n4-V4k" secondAttribute="bottom" constant="20" id="FzL-FT-wK5"/>
+                            <constraint firstItem="eCX-CE-UpO" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="OCI-YD-je4"/>
                             <constraint firstItem="nvV-n4-V4k" firstAttribute="top" secondItem="RXZ-Q3-kZy" secondAttribute="bottom" constant="20" id="gvR-7q-Z5M"/>
                             <constraint firstItem="nvV-n4-V4k" firstAttribute="centerX" secondItem="84z-wQ-6oh" secondAttribute="centerX" id="jNl-Id-A9g"/>
                         </constraints>
