@@ -42,6 +42,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func logout(sender: AnyObject) {
         try! FIRAuth.auth()!.signOut()
+        print("the user has logged out")
+        self.performSegueWithIdentifier("logoutUser", sender: sender)
     }
     @IBAction func deleteUser(sender: AnyObject) {
     }

@@ -252,6 +252,7 @@
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="logout:" destination="j42-hp-cL4" eventType="touchUpInside" id="lMl-Sr-oUk"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" identifier="logoutUser" id="4QV-ZK-D21"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRd-6b-RJl">
