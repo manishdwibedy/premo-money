@@ -137,8 +137,8 @@
                                     <constraint firstAttribute="height" constant="60" id="pCf-kR-95I"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCX-CE-UpO">
-                                <rect key="frame" x="20" y="165" width="335" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCX-CE-UpO">
+                                <rect key="frame" x="16" y="140" width="343" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="LeE-lU-nRP"/>
                                 </constraints>
@@ -146,8 +146,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aN-yI-qTs">
-                                <rect key="frame" x="20" y="200" width="335" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aN-yI-qTs">
+                                <rect key="frame" x="16" y="177" width="343" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="RHL-oe-gWF"/>
@@ -263,7 +263,49 @@
                     <view key="view" contentMode="scaleToFill" id="ReC-m3-sBW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usW-55-M8C">
+                                <rect key="frame" x="-4" y="28" width="383" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="y7u-bw-25J"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Registration" id="BvH-2K-Mkd"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W9H-qE-4QH">
+                                <rect key="frame" x="16" y="142" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TRj-E6-3e7">
+                                <rect key="frame" x="16" y="212" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNd-uv-5h9">
+                                <rect key="frame" x="16" y="282" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nzc-0X-gdp"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dNd-uv-5h9" firstAttribute="leading" secondItem="ReC-m3-sBW" secondAttribute="leadingMargin" id="10w-3B-tCV"/>
+                            <constraint firstItem="usW-55-M8C" firstAttribute="leading" secondItem="ReC-m3-sBW" secondAttribute="leadingMargin" constant="-20" id="3Na-bs-rEB"/>
+                            <constraint firstItem="W9H-qE-4QH" firstAttribute="trailing" secondItem="ReC-m3-sBW" secondAttribute="trailingMargin" id="5EB-Sd-tyS"/>
+                            <constraint firstItem="TRj-E6-3e7" firstAttribute="leading" secondItem="ReC-m3-sBW" secondAttribute="leadingMargin" id="7NU-Ad-w90"/>
+                            <constraint firstItem="W9H-qE-4QH" firstAttribute="leading" secondItem="ReC-m3-sBW" secondAttribute="leadingMargin" id="DoP-ca-6xY"/>
+                            <constraint firstItem="usW-55-M8C" firstAttribute="top" secondItem="lIv-5d-J4c" secondAttribute="bottom" constant="8" id="TNo-uP-FGN"/>
+                            <constraint firstItem="TRj-E6-3e7" firstAttribute="trailing" secondItem="ReC-m3-sBW" secondAttribute="trailingMargin" id="YJJ-7S-vgi"/>
+                            <constraint firstItem="TRj-E6-3e7" firstAttribute="top" secondItem="W9H-qE-4QH" secondAttribute="bottom" constant="40" id="cAW-7B-tnK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="usW-55-M8C" secondAttribute="trailing" constant="-20" id="fHG-Eb-53r"/>
+                            <constraint firstItem="dNd-uv-5h9" firstAttribute="trailing" secondItem="ReC-m3-sBW" secondAttribute="trailingMargin" id="gG0-VQ-zr0"/>
+                            <constraint firstItem="W9H-qE-4QH" firstAttribute="top" secondItem="usW-55-M8C" secondAttribute="bottom" constant="70" id="ioW-CP-e2Q"/>
+                            <constraint firstItem="dNd-uv-5h9" firstAttribute="top" secondItem="TRj-E6-3e7" secondAttribute="bottom" constant="40" id="yX6-32-e0m"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
