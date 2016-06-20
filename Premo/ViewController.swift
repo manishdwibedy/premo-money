@@ -91,8 +91,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             if(textField.text!.characters.count <= 0){
                 self.showAlert("Missing Username", message: "Please enter your username!")
             }
-            else if(textField.text!.characters.count <= 5){
-                self.showAlert("Invalid Username", message: "Please enter more characters!")
+            else if(!Util.isValidEmail(textField.text!)){
+                self.showAlert("Invalid Email address", message: "Please enter a valid email address!")
             }
             break
         case 1:
@@ -125,10 +125,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let password = self.password.text!
         
         FIRAuth.auth()?.signInWithEmail(username, password: Util.salt(password)) { (user, error) in
-            print(user!.displayName)
-            print(user!.email)
-            print(user!.emailVerified)
-            print("User is logged in")
+            if user != nil{
+                print(user!.displayName)
+                print(user!.email)
+                print(user!.emailVerified)
+                print("User is logged in")
+            }
+            else{
+                print("Login issues \(error))")
+            }
         }
         performSegueWithIdentifier("showHomePage", sender: sender)
     }
