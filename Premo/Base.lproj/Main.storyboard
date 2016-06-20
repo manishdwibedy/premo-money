@@ -173,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEm-h7-9on" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="810.5" y="-43.5"/>
+            <point key="canvasLocation" x="778.5" y="-459.5"/>
         </scene>
         <!--Registration-->
         <scene sceneID="s4P-LK-FAS">
@@ -250,7 +250,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0Z-MZ-199" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="810.5" y="691.5"/>
+            <point key="canvasLocation" x="778.5" y="281.5"/>
+        </scene>
+        <!--Registration-->
+        <scene sceneID="zyG-DB-V3G">
+            <objects>
+                <viewController title="Registration" id="yXz-oa-Nkg" customClass="RegisterViewController" customModule="Premo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lIv-5d-J4c"/>
+                        <viewControllerLayoutGuide type="bottom" id="ICN-qh-08r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ReC-m3-sBW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7w9-CE-ber" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778.5" y="1025.5"/>
         </scene>
     </scenes>
     <resources>
