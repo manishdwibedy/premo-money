@@ -250,10 +250,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vG-sL-jqh">
                                 <rect key="frame" x="16" y="452" width="343" height="30"/>
                                 <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="j42-hp-cL4" eventType="touchUpInside" id="lMl-Sr-oUk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRd-6b-RJl">
                                 <rect key="frame" x="16" y="512" width="343" height="30"/>
                                 <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteUser:" destination="j42-hp-cL4" eventType="touchUpInside" id="emM-g4-fN7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

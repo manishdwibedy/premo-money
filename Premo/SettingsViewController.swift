@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SettingsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var username: UITextField!
@@ -39,4 +40,11 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLayoutSubviews()
         address.setContentOffset(CGPointZero, animated: false)
     }
+    @IBAction func logout(sender: AnyObject) {
+        try! FIRAuth.auth()!.signOut()
+    }
+    @IBAction func deleteUser(sender: AnyObject) {
+    }
+    
+    
 }
