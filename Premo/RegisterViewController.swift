@@ -39,7 +39,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 else if(textField.text!.characters.count <= 3){
                     self.showAlert("Invalid Name", message: "Please enter more characters!")
                 }
-                else if textField.text!.rangeOfString(" ") != nil{
+                else if textField.text!.rangeOfString(" ") == nil{
                     self.showAlert("Invalid Full Name", message: "Please enter your first and last name!")
                 }
                 break
