@@ -17,6 +17,8 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         
         // Do any additional setup after loading the view, typically from a nib.
         self.partyList.registerClass(UITableViewCell.self, forCellReuseIdentifier: "party_cell")
+        
+        partyList.tableFooterView = UIView()
 
     }
     
