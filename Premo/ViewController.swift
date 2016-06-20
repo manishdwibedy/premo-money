@@ -130,12 +130,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 print(user!.email)
                 print(user!.emailVerified)
                 print("User is logged in")
+                self.performSegueWithIdentifier("showHomePage", sender: sender)
             }
             else{
                 print("Login issues \(error))")
             }
         }
-        performSegueWithIdentifier("showHomePage", sender: sender)
     }
     
     
