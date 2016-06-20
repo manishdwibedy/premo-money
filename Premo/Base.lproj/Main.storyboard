@@ -193,6 +193,20 @@
                                     <segment title="Hybrid"/>
                                 </segments>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V8t-c8-nFd">
+                                <rect key="frame" x="20" y="413" width="339" height="234"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="90" id="51B-V8-TYf" customClass="PartyTableViewCell" customModule="Premo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="339" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="51B-V8-TYf" id="2h9-P1-ZJv">
+                                            <rect key="frame" x="0.0" y="0.0" width="339" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -204,14 +218,18 @@
                             <constraint firstItem="eCX-CE-UpO" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="OCI-YD-je4"/>
                             <constraint firstItem="uhy-dk-CFt" firstAttribute="top" secondItem="8aN-yI-qTs" secondAttribute="bottom" constant="15" id="OqU-jr-tga"/>
                             <constraint firstItem="uhy-dk-CFt" firstAttribute="leading" secondItem="jar-6n-Cyz" secondAttribute="trailing" constant="10" id="QQr-II-GxF"/>
+                            <constraint firstItem="AeI-J8-0gF" firstAttribute="top" secondItem="V8t-c8-nFd" secondAttribute="bottom" constant="20" id="Smd-oo-gTt"/>
                             <constraint firstItem="uhy-dk-CFt" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" id="Uo9-cQ-Cos"/>
+                            <constraint firstItem="V8t-c8-nFd" firstAttribute="top" secondItem="jar-6n-Cyz" secondAttribute="bottom" constant="20" id="UoS-o4-mJJ"/>
                             <constraint firstItem="jar-6n-Cyz" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="Y2G-VD-JbF"/>
                             <constraint firstItem="Mgn-Tb-3Gj" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" constant="-20" id="a7n-8P-vL9"/>
                             <constraint firstItem="nvV-n4-V4k" firstAttribute="centerX" secondItem="84z-wQ-6oh" secondAttribute="centerX" id="jNl-Id-A9g"/>
                             <constraint firstItem="jar-6n-Cyz" firstAttribute="top" secondItem="8aN-yI-qTs" secondAttribute="bottom" constant="10" id="kMs-jc-sMh"/>
                             <constraint firstItem="8aN-yI-qTs" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" id="mfO-5J-hqW"/>
                             <constraint firstItem="8aN-yI-qTs" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="q00-K5-q8g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V8t-c8-nFd" secondAttribute="trailing" id="qHV-h7-XDo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mgn-Tb-3Gj" secondAttribute="trailing" constant="-20" id="vGZ-LA-1us"/>
+                            <constraint firstItem="V8t-c8-nFd" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="yNH-xQ-V5i"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -408,6 +426,6 @@
         <image name="settings" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Etc-C9-BsR"/>
+        <segue reference="eYb-X6-y9H"/>
     </inferredMetricsTieBreakers>
 </document>
