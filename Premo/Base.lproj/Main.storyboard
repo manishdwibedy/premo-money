@@ -121,7 +121,7 @@
         <!--Home Page-->
         <scene sceneID="rhn-YD-eG7">
             <objects>
-                <viewController title="Home Page" id="A5A-e5-Meq" sceneMemberID="viewController">
+                <viewController title="Home Page" id="A5A-e5-Meq" customClass="HomePageViewController" customModule="Premo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RXZ-Q3-kZy"/>
                         <viewControllerLayoutGuide type="bottom" id="AeI-J8-0gF"/>
@@ -206,6 +206,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="A5A-e5-Meq" id="QX3-1O-WTA"/>
+                                    <outlet property="delegate" destination="A5A-e5-Meq" id="dBo-az-Yb7"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -233,6 +237,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="partyList" destination="V8t-c8-nFd" id="rX3-Rf-dmP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEm-h7-9on" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
