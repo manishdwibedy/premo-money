@@ -158,6 +158,9 @@
                                     <navigationItem title="Home" id="b4x-M2-Ojq">
                                         <barButtonItem key="rightBarButtonItem" image="settings" id="UxD-WE-mnV">
                                             <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                            <connections>
+                                                <segue destination="j42-hp-cL4" kind="showDetail" id="E2D-kf-cOj"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -190,6 +193,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEm-h7-9on" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="778.5" y="-159.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nPT-nQ-sPc">
+            <objects>
+                <viewController id="j42-hp-cL4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UA1-G5-CdK"/>
+                        <viewControllerLayoutGuide type="bottom" id="sQD-ML-UjA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F0e-oR-h3e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tl9-vo-mkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1323" y="-545"/>
         </scene>
         <!--Registration-->
         <scene sceneID="s4P-LK-FAS">
