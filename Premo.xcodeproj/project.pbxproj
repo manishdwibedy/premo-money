@@ -18,6 +18,7 @@
 		5B04EC9D1D14940300FE6C72 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04EC9C1D14940300FE6C72 /* RegisterViewController.swift */; };
 		5B04EC9F1D14B74600FE6C72 /* utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04EC9E1D14B74600FE6C72 /* utility.swift */; };
 		5B24B8871D14DC1A0026CF67 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B24B8861D14DC1A0026CF67 /* HomePageViewController.swift */; };
+		5B845BDB1D186CAA00C1616B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B845BDA1D186CAA00C1616B /* GoogleService-Info.plist */; };
 		BDD977FB07C3ECDD2A38393E /* Pods_Premo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6848F403B6249BF17C4BCF /* Pods_Premo.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		5B04EC9C1D14940300FE6C72 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5B04EC9E1D14B74600FE6C72 /* utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utility.swift; sourceTree = "<group>"; };
 		5B24B8861D14DC1A0026CF67 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		5B845BDA1D186CAA00C1616B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA6848F403B6249BF17C4BCF /* Pods_Premo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Premo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 				5B04EC871D14811900FE6C72 /* Info.plist */,
 				5B04EC9B1D14834600FE6C72 /* Frameworks */,
 				5B04EC9E1D14B74600FE6C72 /* utility.swift */,
+				5B845BDA1D186CAA00C1616B /* GoogleService-Info.plist */,
 			);
 			path = Premo;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B04EC861D14811900FE6C72 /* LaunchScreen.storyboard in Resources */,
+				5B845BDB1D186CAA00C1616B /* GoogleService-Info.plist in Resources */,
 				5B04EC831D14811900FE6C72 /* Assets.xcassets in Resources */,
 				5B04EC811D14811900FE6C72 /* Main.storyboard in Resources */,
 			);
@@ -368,6 +372,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.manish.Premo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -385,6 +390,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.manish.Premo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
