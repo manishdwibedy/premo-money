@@ -172,6 +172,27 @@
                                     <constraint firstAttribute="height" constant="60" id="pCf-kR-95I"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Party Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jar-6n-Cyz">
+                                <rect key="frame" x="20" y="362" width="110" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Q1K-rW-aof"/>
+                                    <constraint firstAttribute="width" constant="110" id="Wy1-mz-U21"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uhy-dk-CFt">
+                                <rect key="frame" x="137" y="362" width="218" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="jXB-j1-mca"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Indigo"/>
+                                    <segment title="Stativa"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -181,8 +202,13 @@
                             <constraint firstItem="eCX-CE-UpO" firstAttribute="top" secondItem="nvV-n4-V4k" secondAttribute="bottom" constant="40" id="FzL-FT-wK5"/>
                             <constraint firstItem="8aN-yI-qTs" firstAttribute="top" secondItem="eCX-CE-UpO" secondAttribute="bottom" constant="10" id="INY-88-IZj"/>
                             <constraint firstItem="eCX-CE-UpO" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="OCI-YD-je4"/>
+                            <constraint firstItem="uhy-dk-CFt" firstAttribute="top" secondItem="8aN-yI-qTs" secondAttribute="bottom" constant="15" id="OqU-jr-tga"/>
+                            <constraint firstItem="uhy-dk-CFt" firstAttribute="leading" secondItem="jar-6n-Cyz" secondAttribute="trailing" constant="10" id="QQr-II-GxF"/>
+                            <constraint firstItem="uhy-dk-CFt" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" id="Uo9-cQ-Cos"/>
+                            <constraint firstItem="jar-6n-Cyz" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="Y2G-VD-JbF"/>
                             <constraint firstItem="Mgn-Tb-3Gj" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" constant="-20" id="a7n-8P-vL9"/>
                             <constraint firstItem="nvV-n4-V4k" firstAttribute="centerX" secondItem="84z-wQ-6oh" secondAttribute="centerX" id="jNl-Id-A9g"/>
+                            <constraint firstItem="jar-6n-Cyz" firstAttribute="top" secondItem="8aN-yI-qTs" secondAttribute="bottom" constant="10" id="kMs-jc-sMh"/>
                             <constraint firstItem="8aN-yI-qTs" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" id="mfO-5J-hqW"/>
                             <constraint firstItem="8aN-yI-qTs" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="q00-K5-q8g"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mgn-Tb-3Gj" secondAttribute="trailing" constant="-20" id="vGZ-LA-1us"/>
