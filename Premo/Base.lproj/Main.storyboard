@@ -205,13 +205,78 @@
                     <view key="view" contentMode="scaleToFill" id="F0e-oR-h3e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker alpha="0.0" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="DUa-K0-tcw">
+                                <rect key="frame" x="0.0" y="129" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="488150847.48223102">
+                                    <!--2016-06-20 21:27:27 +0000-->
+                                </date>
+                            </datePicker>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oET-o5-Le3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="uF1-mk-JNS"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Settings" id="lRy-81-Weo">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="hrX-vw-xnQ">
+                                            <connections>
+                                                <segue destination="A5A-e5-Meq" kind="showDetail" id="Etc-C9-BsR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZYP-Fw-fPl">
+                                <rect key="frame" x="20" y="123" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6iO-Of-Vmt">
+                                <rect key="frame" x="20" y="192" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eSf-Pa-Vrq">
+                                <rect key="frame" x="20" y="257" width="335" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Rfd-d8-A4s"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DUa-K0-tcw" firstAttribute="centerY" secondItem="F0e-oR-h3e" secondAttribute="centerY" id="0Wq-1B-Y6m"/>
+                            <constraint firstItem="eSf-Pa-Vrq" firstAttribute="top" secondItem="6iO-Of-Vmt" secondAttribute="bottom" constant="50" id="4IX-u0-Nvz"/>
+                            <constraint firstItem="6iO-Of-Vmt" firstAttribute="trailing" secondItem="F0e-oR-h3e" secondAttribute="trailingMargin" id="Ag7-XN-f8v"/>
+                            <constraint firstItem="oET-o5-Le3" firstAttribute="leading" secondItem="F0e-oR-h3e" secondAttribute="leadingMargin" constant="-20" id="DNc-zK-Bsw"/>
+                            <constraint firstItem="eSf-Pa-Vrq" firstAttribute="trailing" secondItem="F0e-oR-h3e" secondAttribute="trailingMargin" id="FbE-yL-PNr"/>
+                            <constraint firstItem="ZYP-Fw-fPl" firstAttribute="leading" secondItem="F0e-oR-h3e" secondAttribute="leadingMargin" id="Kao-5y-unI"/>
+                            <constraint firstItem="ZYP-Fw-fPl" firstAttribute="trailing" secondItem="F0e-oR-h3e" secondAttribute="trailingMargin" id="OFW-6T-ON5"/>
+                            <constraint firstItem="oET-o5-Le3" firstAttribute="top" secondItem="UA1-G5-CdK" secondAttribute="bottom" id="OHU-61-K7F"/>
+                            <constraint firstItem="6iO-Of-Vmt" firstAttribute="leading" secondItem="F0e-oR-h3e" secondAttribute="leadingMargin" id="Xci-Xf-pnE"/>
+                            <constraint firstItem="6iO-Of-Vmt" firstAttribute="top" secondItem="ZYP-Fw-fPl" secondAttribute="bottom" constant="50" id="cha-wf-MOj"/>
+                            <constraint firstItem="eSf-Pa-Vrq" firstAttribute="leading" secondItem="F0e-oR-h3e" secondAttribute="leadingMargin" id="njJ-Ia-sTM"/>
+                            <constraint firstItem="DUa-K0-tcw" firstAttribute="centerX" secondItem="F0e-oR-h3e" secondAttribute="centerX" id="q9Z-fe-Nt2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oET-o5-Le3" secondAttribute="trailing" constant="-20" id="sfj-rG-1ha"/>
+                            <constraint firstItem="ZYP-Fw-fPl" firstAttribute="top" secondItem="oET-o5-Le3" secondAttribute="bottom" constant="50" id="wPg-xo-7g0"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="address" destination="eSf-Pa-Vrq" id="QLa-kp-6iT"/>
+                        <outlet property="datepicker" destination="DUa-K0-tcw" id="RFK-f6-ond"/>
+                        <outlet property="dob" destination="6iO-Of-Vmt" id="bDa-jX-T64"/>
+                        <outlet property="username" destination="ZYP-Fw-fPl" id="cY0-FP-Mn6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tl9-vo-mkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1323" y="-545"/>
+            <point key="canvasLocation" x="1322.5" y="-545.5"/>
         </scene>
         <!--Registration-->
         <scene sceneID="s4P-LK-FAS">
@@ -295,4 +360,7 @@
         <image name="dummy-user" width="800" height="800"/>
         <image name="settings" width="40" height="40"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Etc-C9-BsR"/>
+    </inferredMetricsTieBreakers>
 </document>
