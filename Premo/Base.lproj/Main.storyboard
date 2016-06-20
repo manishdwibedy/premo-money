@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="778.5" y="-159.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="nPT-nQ-sPc">
             <objects>
-                <viewController id="j42-hp-cL4" sceneMemberID="viewController">
+                <viewController title="Settings" id="j42-hp-cL4" customClass="SettingsViewController" customModule="Premo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UA1-G5-CdK"/>
                         <viewControllerLayoutGuide type="bottom" id="sQD-ML-UjA"/>
