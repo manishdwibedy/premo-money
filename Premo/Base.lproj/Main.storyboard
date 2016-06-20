@@ -155,7 +155,11 @@
                                     <constraint firstAttribute="height" constant="44" id="7ml-K0-0li"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Home" id="b4x-M2-Ojq"/>
+                                    <navigationItem title="Home" id="b4x-M2-Ojq">
+                                        <barButtonItem key="rightBarButtonItem" image="settings" id="UxD-WE-mnV">
+                                            <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy-user" translatesAutoresizingMaskIntoConstraints="NO" id="nvV-n4-V4k">
@@ -267,5 +271,6 @@
     </scenes>
     <resources>
         <image name="dummy-user" width="800" height="800"/>
+        <image name="settings" width="40" height="40"/>
     </resources>
 </document>
