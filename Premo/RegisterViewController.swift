@@ -45,12 +45,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 }
                 break
             case 1:
-                print("Username : " + textField.text!)
+                print("Email ID : " + textField.text!)
                 if(textField.text!.characters.count <= 0){
-                    self.showAlert("Missing Username", message: "Please enter your username!")
+                    self.showAlert("Missing Username", message: "Please enter your email address!")
                 }
-                else if(textField.text!.characters.count <= 5){
-                    self.showAlert("Invalid Username", message: "Please enter more characters!")
+                else if(!Util.isValidEmail(textField.text!)){
+                    self.showAlert("Invalid Email address", message: "Please enter a valid email address!")
                 }
                 break
             case 2:

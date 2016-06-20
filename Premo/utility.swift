@@ -43,4 +43,11 @@ class Util{
         return UIDevice.currentDevice().identifierForVendor!.UUIDString
     }
     
+    // Checking where the input string is a valid email or not
+    static func isValidEmail(inputString:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        let range = inputString.rangeOfString(emailRegEx, options:.RegularExpressionSearch)
+        let result = range != nil ? true : false
+        return result
+    }
 }
