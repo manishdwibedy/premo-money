@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
 
@@ -79,6 +80,15 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         let saltedPassword = Util.salt(password)
         
         print(saltedPassword)
+        
+        FIRAuth.auth()?.createUserWithEmail(username, password: saltedPassword) { (user, error) in
+            if error == nil{
+                print("User registration successful!")
+            }
+            else{
+                print("User registration failed")
+            }
+        }
         
     }
     
