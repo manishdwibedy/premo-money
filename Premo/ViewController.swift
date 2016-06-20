@@ -124,10 +124,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let username = self.username.text!
         let password = self.password.text!
         
-        print(Util.hash(password))
-        print(Util.hash(username))
-        
-        FIRAuth.auth()?.signInWithEmail(username, password: password) { (user, error) in
+        FIRAuth.auth()?.signInWithEmail(username, password: Util.salt(password)) { (user, error) in
             print(user!.displayName)
             print(user!.email)
             print(user!.emailVerified)
