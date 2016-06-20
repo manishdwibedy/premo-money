@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import FirebaseAuth
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
@@ -126,6 +127,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print(Util.hash(password))
         print(Util.hash(username))
         
+        FIRAuth.auth()?.signInWithEmail(username, password: password) { (user, error) in
+            print(user!.displayName)
+            print(user!.email)
+            print(user!.emailVerified)
+            print("User is logged in")
+        }
         performSegueWithIdentifier("showHomePage", sender: sender)
     }
     
