@@ -23,6 +23,11 @@ class HostingPartyViewController: UIViewController {
         
         currentDonationAmount.text = "Donating $\(sender.value)"
     }
+    
+    @IBAction func hostParty(sender: UIButton) {
+        print(maxCapacity.text!)
+        print(donationSlider.value)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

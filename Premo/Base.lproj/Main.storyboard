@@ -532,7 +532,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="5" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="tc5-eX-zLM">
-                                <rect key="frame" x="16" y="290" width="343" height="31"/>
+                                <rect key="frame" x="16" y="290" width="339" height="31"/>
                                 <connections>
                                     <action selector="donationAmountChanged:" destination="KEX-vL-gdh" eventType="valueChanged" id="T00-UB-Np1"/>
                                 </connections>
@@ -543,6 +543,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5B-06-Zlj">
+                                <rect key="frame" x="16" y="426" width="343" height="30"/>
+                                <state key="normal" title="HOST"/>
+                                <connections>
+                                    <action selector="hostParty:" destination="KEX-vL-gdh" eventType="touchUpInside" id="qQA-Hr-zqW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -551,11 +558,14 @@
                             <constraint firstItem="KZb-Lt-osM" firstAttribute="trailing" secondItem="nnC-wo-6c0" secondAttribute="trailingMargin" id="60R-ER-EYq"/>
                             <constraint firstItem="Yfm-Sy-Iyh" firstAttribute="centerX" secondItem="nnC-wo-6c0" secondAttribute="centerX" id="9TD-wo-J3G"/>
                             <constraint firstItem="zbu-VR-gcG" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" id="N9i-ia-eAf"/>
+                            <constraint firstItem="A5B-06-Zlj" firstAttribute="trailing" secondItem="nnC-wo-6c0" secondAttribute="trailingMargin" id="Oe4-a3-gJw"/>
                             <constraint firstItem="9SL-fs-xpU" firstAttribute="top" secondItem="O9Q-Q0-LH2" secondAttribute="bottom" id="PZh-wm-nfR"/>
                             <constraint firstItem="tc5-eX-zLM" firstAttribute="trailing" secondItem="nnC-wo-6c0" secondAttribute="trailingMargin" id="R3H-Oo-sWS"/>
                             <constraint firstItem="Yfm-Sy-Iyh" firstAttribute="top" secondItem="pTS-UK-PBk" secondAttribute="bottom" constant="30" id="SN4-Vo-8Ut"/>
                             <constraint firstItem="KZb-Lt-osM" firstAttribute="top" secondItem="tc5-eX-zLM" secondAttribute="bottom" constant="35" id="TjS-e5-Teb"/>
                             <constraint firstItem="zbu-VR-gcG" firstAttribute="top" secondItem="Yfm-Sy-Iyh" secondAttribute="bottom" constant="30" id="Xct-1P-Y4Z"/>
+                            <constraint firstItem="A5B-06-Zlj" firstAttribute="top" secondItem="KZb-Lt-osM" secondAttribute="bottom" constant="50" id="b4U-vs-viE"/>
+                            <constraint firstItem="A5B-06-Zlj" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" id="hxP-Ti-3Hf"/>
                             <constraint firstItem="pTS-UK-PBk" firstAttribute="trailing" secondItem="nnC-wo-6c0" secondAttribute="trailingMargin" id="kbS-Tn-Cvf"/>
                             <constraint firstItem="zbu-VR-gcG" firstAttribute="trailing" secondItem="nnC-wo-6c0" secondAttribute="trailingMargin" id="lhx-mO-4tO"/>
                             <constraint firstItem="9SL-fs-xpU" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" constant="-20" id="qet-Fg-d80"/>
