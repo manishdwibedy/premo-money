@@ -39,8 +39,6 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         
         map.showsUserLocation = true
         
-        self.addAnnotationsOnMap(34.049297, long: -118.253770, name: "Millennium Biltmore Hotel")
-        
         var annotations = [MKAnnotation]()
         
         for i in [1,2,3,4,5]{
