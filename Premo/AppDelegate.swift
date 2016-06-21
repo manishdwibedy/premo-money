@@ -16,7 +16,8 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var ref = FIRDatabaseReference()
+    
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
@@ -27,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Configuring Firebase
         FIRApp.configure()
+        
+        // Configuring the database
+        self.ref = FIRDatabase.database().reference()
         return true
     }
 
