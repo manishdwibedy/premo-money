@@ -50,15 +50,21 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         try! FIRAuth.auth()!.signOut()
         print("the user has logged out")
         
-        let db_ref = FIRDatabase.database().reference()
-        db_ref.child("party").child("1").setValue(["name": "party_1"])
-        
         // Have to delete the user as well.
         self.performSegueWithIdentifier("logoutUser", sender: sender)
     }
     
-    
     @IBAction func saveSettings(sender: UIBarButtonItem) {
-        print("Saving")
+        let uid = FIRAuth.auth()?.currentUser?.uid
+        
+        let db_ref = FIRDatabase.database().reference()
+        
+        let user_data = [
+            "username": username.text!,
+            "dob" : dob.text!,
+            "address": address.text!
+        ]
+        db_ref.child("user_info").child(uid!).setValue(user_data)
+        
     }
 }
