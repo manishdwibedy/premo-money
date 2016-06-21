@@ -99,8 +99,9 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
             
             if annotationView == nil {
                 //4
-                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 annotationView!.canShowCallout = true
+                annotationView!.image = UIImage(named:"party")
                 
                 // 5
                 let btn = UIButton(type: .DetailDisclosure)
@@ -109,7 +110,6 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
                 // 6
                 annotationView!.annotation = annotation
             }
-            
             return annotationView
         }
         
@@ -126,4 +126,5 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         presentViewController(ac, animated: true, completion: nil)
     }
-}
+    
+    }
