@@ -12,11 +12,19 @@ class HostingPartyViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var maxCapacity: UILabel!
     @IBOutlet weak var donationPicker: UIPickerView!
     
+    @IBOutlet weak var currentDonationAmount: UILabel!
+    @IBOutlet weak var donationSlider: UISlider!
     @IBOutlet weak var donationAmount: UITextField!
     var pickerData: [String] = [String]()
     
     @IBAction func valueChanged(sender: UIStepper) {
         maxCapacity.text = Int(sender.value).description
+    }
+    @IBAction func donationAmountChanged(sender: UISlider) {
+        let roundedValue = round(sender.value / 1) * 1
+        sender.value = roundedValue
+        
+        currentDonationAmount.text = "Donating $\(sender.value)"
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +34,10 @@ class HostingPartyViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         self.donationPicker.delegate = self
         self.donationPicker.dataSource = self
-        self.donationAmount.delegate = self
+        
+        
+        donationSlider.continuous = false
+        currentDonationAmount.text = "Donating $\(donationSlider.value)"
     }
     
     override func didReceiveMemoryWarning() {
