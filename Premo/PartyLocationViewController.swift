@@ -8,16 +8,38 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class PartyLocationViewController: UIViewController {
+class PartyLocationViewController: UIViewController, CLLocationManagerDelegate  {
     @IBOutlet weak var map: MKMapView!
+    var locationManager: CLLocationManager!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.locationManager = CLLocationManager()
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        self.locationManager.delegate = self;
+        
         let initialLocation = CLLocation(latitude: 34.051454, longitude: -118.249029)
         centerMapOnLocation(initialLocation)
+        
+        let status = CLLocationManager.authorizationStatus()
+        if status == .NotDetermined || status == .Denied || status == .AuthorizedWhenInUse {
+            // present an alert indicating location authorization required
+            // and offer to take the user to Settings for the app via
+            // UIApplication -openUrl: and UIApplicationOpenSettingsURLString
+            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
+        }
+        locationManager.startUpdatingLocation()
+        locationManager.startUpdatingHeading()
+        
+        map.showsUserLocation = true
+        map.mapType = MKMapType(rawValue: 0)!
+        map.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,7 +52,14 @@ class PartyLocationViewController: UIViewController {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius * 2.0, regionRadius * 2.0)
         map.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last
         
+        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         
+        self.map.setRegion(region, animated: true)
     }
 }
