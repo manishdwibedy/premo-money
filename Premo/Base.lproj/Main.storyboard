@@ -80,9 +80,9 @@
                                     <action selector="facebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nHr-W9-Ffv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cb-mT-utw">
-                                <rect key="frame" x="165" y="484" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cb-mT-utw">
+                                <rect key="frame" x="20" y="484" width="335" height="30"/>
+                                <state key="normal" title="Party Locations"/>
                                 <connections>
                                     <segue destination="OKZ-sJ-Ecf" kind="show" id="2LQ-dB-JDs"/>
                                 </connections>
@@ -99,9 +99,12 @@
                             <constraint firstItem="04E-yN-sc2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KHs-QD-fBn"/>
                             <constraint firstItem="9PQ-cz-2Zt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KrN-MI-Tj2"/>
                             <constraint firstItem="04E-yN-sc2" firstAttribute="top" secondItem="jP4-28-kkh" secondAttribute="bottom" constant="75" id="OrO-L7-LJF"/>
+                            <constraint firstItem="4Cb-mT-utw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WkE-23-yAl"/>
+                            <constraint firstItem="4Cb-mT-utw" firstAttribute="top" secondItem="9PQ-cz-2Zt" secondAttribute="bottom" constant="40" id="YHo-MQ-ns5"/>
                             <constraint firstItem="jP4-28-kkh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="YKz-Lv-Vp6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="djk-67-rz6" secondAttribute="bottom" constant="8" id="Ye5-CR-fdu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="djk-67-rz6" secondAttribute="trailing" constant="-1" id="Yhr-0M-Eh3"/>
+                            <constraint firstItem="4Cb-mT-utw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZNJ-IN-Vsa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Mh-xS-b1A" secondAttribute="trailing" id="ctI-SW-E1f"/>
                             <constraint firstItem="jP4-28-kkh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ibW-tB-UgF"/>
                             <constraint firstItem="hTE-GS-yi6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kOI-lb-BeG"/>
