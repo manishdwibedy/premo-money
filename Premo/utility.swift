@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import CryptoSwift
+import FirebaseAuth
 
 class Util{
     
@@ -74,5 +75,30 @@ class Util{
         let range = inputString.rangeOfString(emailRegEx, options:.RegularExpressionSearch)
         let result = range != nil ? true : false
         return result
+    }
+    
+    /*!
+     * @discussion Returns the current time stamp
+     * @param
+     * @return Returns the current date time.
+     */
+    static func printTimestamp() -> String {
+        let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+        return timestamp
+    }
+    
+    /*!
+     * @discussion Returns the party identifier
+     * @param
+     * @return Returns the party ID, which comprises of the uid attached with the timestamp
+     */
+    static func getPartyIdentifier() -> String{
+        let timestamp = printTimestamp()
+        
+        let spaceRemoved = timestamp.stringByReplacingOccurrencesOfString(" ", withString: "_")
+        let partyID = spaceRemoved.stringByReplacingOccurrencesOfString(",", withString: "")
+        
+        let uid = FIRAuth.auth()?.currentUser?.uid
+        return "\(uid!)::\(partyID)"
     }
 }

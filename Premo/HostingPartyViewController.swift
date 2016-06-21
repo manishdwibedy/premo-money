@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class HostingPartyViewController: UIViewController {
+    let partyID = Util.getPartyIdentifier()
+    let db_ref = FIRDatabase.database().reference()
+    
     @IBOutlet weak var maxCapacity: UILabel!
     
     @IBOutlet weak var currentDonationAmount: UILabel!
@@ -27,6 +31,14 @@ class HostingPartyViewController: UIViewController {
     @IBAction func hostParty(sender: UIButton) {
         print(maxCapacity.text!)
         print(donationSlider.value)
+        
+        let party_data = [
+            "capacity": Int(maxCapacity.text!)!,
+            "donations" : donationSlider.value,
+        ]
+        db_ref.child("party").child(partyID).setValue(party_data)
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
