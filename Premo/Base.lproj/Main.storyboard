@@ -87,6 +87,13 @@
                                     <segue destination="OKZ-sJ-Ecf" kind="show" id="2LQ-dB-JDs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wh3-29-wjg">
+                                <rect key="frame" x="20" y="552" width="335" height="30"/>
+                                <state key="normal" title="Host a party"/>
+                                <connections>
+                                    <segue destination="KEX-vL-gdh" kind="show" id="E4q-Da-9vI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -96,8 +103,10 @@
                             <constraint firstItem="djk-67-rz6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Anz-FN-j0y"/>
                             <constraint firstItem="0Mh-xS-b1A" firstAttribute="top" secondItem="04E-yN-sc2" secondAttribute="bottom" constant="30" id="D4j-Lo-4W8"/>
                             <constraint firstItem="X7r-cI-QiH" firstAttribute="top" secondItem="hTE-GS-yi6" secondAttribute="bottom" constant="50" id="Gr3-n8-qao"/>
+                            <constraint firstItem="Wh3-29-wjg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="H3s-1h-oes"/>
                             <constraint firstItem="04E-yN-sc2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KHs-QD-fBn"/>
                             <constraint firstItem="9PQ-cz-2Zt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KrN-MI-Tj2"/>
+                            <constraint firstItem="Wh3-29-wjg" firstAttribute="top" secondItem="4Cb-mT-utw" secondAttribute="bottom" constant="30" id="OTy-DF-fIN"/>
                             <constraint firstItem="04E-yN-sc2" firstAttribute="top" secondItem="jP4-28-kkh" secondAttribute="bottom" constant="75" id="OrO-L7-LJF"/>
                             <constraint firstItem="4Cb-mT-utw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WkE-23-yAl"/>
                             <constraint firstItem="4Cb-mT-utw" firstAttribute="top" secondItem="9PQ-cz-2Zt" secondAttribute="bottom" constant="40" id="YHo-MQ-ns5"/>
@@ -114,6 +123,7 @@
                             <constraint firstItem="X7r-cI-QiH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rsr-eQ-ceg"/>
                             <constraint firstItem="0Mh-xS-b1A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sms-PE-h6K"/>
                             <constraint firstItem="jP4-28-kkh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="x5Q-AZ-AX2"/>
+                            <constraint firstItem="Wh3-29-wjg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zW6-J7-Tub"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -460,6 +470,77 @@
             </objects>
             <point key="canvasLocation" x="778.5" y="737.5"/>
         </scene>
+        <!--Host Party-->
+        <scene sceneID="Odg-QK-Cnq">
+            <objects>
+                <viewController title="Host Party" id="KEX-vL-gdh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O9Q-Q0-LH2"/>
+                        <viewControllerLayoutGuide type="bottom" id="PHe-DY-niT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nnC-wo-6c0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9SL-fs-xpU">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Uy9-C1-885"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Host a party" id="56t-tq-9w6">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="iMp-br-8PW">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="showDetail" id="9kD-ub-xa4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Maximum number of people in the party?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTS-UK-PBk">
+                                <rect key="frame" x="20" y="109" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yfm-Sy-Iyh">
+                                <rect key="frame" x="67" y="149" width="240" height="59"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mza-eC-rbS">
+                                        <rect key="frame" x="29" y="19" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="b9v-ca-gfR">
+                                        <rect key="frame" x="117" y="15" width="94" height="29"/>
+                                    </stepper>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="YRe-r4-4hE"/>
+                                    <constraint firstAttribute="height" constant="59" id="m4m-UB-6la"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pTS-UK-PBk" firstAttribute="top" secondItem="9SL-fs-xpU" secondAttribute="bottom" constant="30" id="1sb-ST-HpP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9SL-fs-xpU" secondAttribute="trailing" constant="-20" id="2ei-zh-kZF"/>
+                            <constraint firstItem="Yfm-Sy-Iyh" firstAttribute="centerX" secondItem="nnC-wo-6c0" secondAttribute="centerX" id="9TD-wo-J3G"/>
+                            <constraint firstItem="9SL-fs-xpU" firstAttribute="top" secondItem="O9Q-Q0-LH2" secondAttribute="bottom" id="PZh-wm-nfR"/>
+                            <constraint firstItem="Yfm-Sy-Iyh" firstAttribute="top" secondItem="pTS-UK-PBk" secondAttribute="bottom" constant="30" id="SN4-Vo-8Ut"/>
+                            <constraint firstItem="pTS-UK-PBk" firstAttribute="trailing" secondItem="nnC-wo-6c0" secondAttribute="trailingMargin" id="kbS-Tn-Cvf"/>
+                            <constraint firstItem="9SL-fs-xpU" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" constant="-20" id="qet-Fg-d80"/>
+                            <constraint firstItem="pTS-UK-PBk" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" id="y4f-Al-NYJ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QBn-YZ-Ktk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322.5" y="1165.5"/>
+        </scene>
         <!--Party Location-->
         <scene sceneID="SGj-8K-F4R">
             <objects>
@@ -533,6 +614,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eYb-X6-y9H"/>
-        <segue reference="adm-PH-R1g"/>
+        <segue reference="9kD-ub-xa4"/>
     </inferredMetricsTieBreakers>
 </document>
