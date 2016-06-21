@@ -631,6 +631,9 @@
                             </segmentedControl>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ouo-y0-ytN">
                                 <rect key="frame" x="-4" y="97" width="383" height="570"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OKZ-sJ-Ecf" id="gfk-xk-bfu"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

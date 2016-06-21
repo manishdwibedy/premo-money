@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class PartyLocationViewController: UIViewController, CLLocationManagerDelegate  {
+class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
     @IBOutlet weak var map: MKMapView!
     var locationManager: CLLocationManager!
 
@@ -53,6 +53,8 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate  
         }
         
         map.addAnnotations(annotations)
+        
+        map.delegate = self
 
     }
     
@@ -72,7 +74,7 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate  
         let location = locations.last
         
         let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        _ = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         
 //        self.map.setRegion(region, animated: true)
     }
@@ -90,7 +92,7 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate  
         map.addAnnotation(dropPin)
     }
     
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         // 1
         let identifier = "Party"
         
@@ -119,7 +121,7 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate  
         return nil
     }
     
-    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         let capital = view.annotation as! Party
         let placeName = capital.title
         let placeInfo = capital.info
