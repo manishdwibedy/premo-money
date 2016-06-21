@@ -38,8 +38,6 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         locationManager.startUpdatingHeading()
         
         map.showsUserLocation = true
-        map.mapType = MKMapType(rawValue: 0)!
-        map.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
         
         self.addAnnotationsOnMap(34.049297, long: -118.253770, name: "Millennium Biltmore Hotel")
         
