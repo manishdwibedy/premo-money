@@ -58,4 +58,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    @IBAction func saveSettings(sender: UIBarButtonItem) {
+        print("Saving")
+    }
 }

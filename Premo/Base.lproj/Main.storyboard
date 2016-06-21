@@ -318,6 +318,11 @@
                                                 <segue destination="A5A-e5-Meq" kind="showDetail" id="Etc-C9-BsR"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="4gV-TU-oCO">
+                                            <connections>
+                                                <action selector="saveSettings:" destination="j42-hp-cL4" id="GpL-GT-haN"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
