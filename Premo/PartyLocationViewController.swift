@@ -40,6 +40,8 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate  
         map.showsUserLocation = true
         map.mapType = MKMapType(rawValue: 0)!
         map.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
+        
+        self.addAnnotationsOnMap(34.049297, long: -118.253770, name: "Millennium Biltmore Hotel")
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,5 +63,18 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate  
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         
         self.map.setRegion(region, animated: true)
+    }
+    
+    func addAnnotationsOnMap(lat: Double, long: Double, name: String){
+        // show the location on the map
+        let location = CLLocationCoordinate2DMake(lat, long)
+        
+        // Drop a pin
+        let dropPin = MKPointAnnotation()
+        
+        dropPin.coordinate = location
+        dropPin.title = name
+        
+        map.addAnnotation(dropPin)
     }
 }

@@ -41,6 +41,7 @@
 		5B04EC971D14833700FE6C72 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		5B04EC9C1D14940300FE6C72 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5B04EC9E1D14B74600FE6C72 /* utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utility.swift; sourceTree = "<group>"; };
+		5B111B391D19F7BB0015F434 /* location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = location.gpx; sourceTree = "<group>"; };
 		5B24B8861D14DC1A0026CF67 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		5B477E8C1D18CAA4003976BD /* PartyLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyLocationViewController.swift; sourceTree = "<group>"; };
 		5B477E8E1D18CB6E003976BD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -101,6 +102,7 @@
 				5B04EC9B1D14834600FE6C72 /* Frameworks */,
 				5B04EC9E1D14B74600FE6C72 /* utility.swift */,
 				5B845BDA1D186CAA00C1616B /* GoogleService-Info.plist */,
+				5B111B391D19F7BB0015F434 /* location.gpx */,
 			);
 			path = Premo;
 			sourceTree = "<group>";
