@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         
         // Configuring the database
-        self.ref = FIRDatabase.database().reference()
+        let _ = FIRDatabase.database().reference()
         return true
     }
 

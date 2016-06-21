@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class SettingsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var username: UITextField!
@@ -48,6 +49,9 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     @IBAction func deleteUser(sender: AnyObject) {
         try! FIRAuth.auth()!.signOut()
         print("the user has logged out")
+        
+        let db_ref = FIRDatabase.database().reference()
+        db_ref.child("party").child("1").setValue(["name": "party_1"])
         
         // Have to delete the user as well.
         self.performSegueWithIdentifier("logoutUser", sender: sender)
