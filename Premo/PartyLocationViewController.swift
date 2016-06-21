@@ -42,6 +42,18 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate  
         map.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
         
         self.addAnnotationsOnMap(34.049297, long: -118.253770, name: "Millennium Biltmore Hotel")
+        
+        var annotations = [MKAnnotation]()
+        
+        for i in [1,2,3,4,5]{
+            let party = Party(title: "Party \(i)",
+                              coordinate: CLLocationCoordinate2D(latitude: 34.049297 + 0.01 * Double(i), longitude: -118.253770 + 0.004 * Double(i)),
+                              info: "Description for party \(i) would come here")
+            annotations.append(party)
+        }
+        
+        map.addAnnotations(annotations)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,7 +74,7 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate  
         let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         
-        self.map.setRegion(region, animated: true)
+//        self.map.setRegion(region, animated: true)
     }
     
     func addAnnotationsOnMap(lat: Double, long: Double, name: String){
@@ -76,5 +88,44 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate  
         dropPin.title = name
         
         map.addAnnotation(dropPin)
+    }
+    
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        // 1
+        let identifier = "Party"
+        
+        // 2
+        if annotation is Party {
+            // 3
+            var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+            
+            if annotationView == nil {
+                //4
+                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                annotationView!.canShowCallout = true
+                
+                // 5
+                let btn = UIButton(type: .DetailDisclosure)
+                annotationView!.rightCalloutAccessoryView = btn
+            } else {
+                // 6
+                annotationView!.annotation = annotation
+            }
+            
+            return annotationView
+        }
+        
+        // 7
+        return nil
+    }
+    
+    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
+        let capital = view.annotation as! Party
+        let placeName = capital.title
+        let placeInfo = capital.info
+        
+        let ac = UIAlertController(title: placeName, message: placeInfo, preferredStyle: .Alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        presentViewController(ac, animated: true, completion: nil)
     }
 }
