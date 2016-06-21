@@ -482,6 +482,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pickerView alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WUS-Lt-JUE">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="KEX-vL-gdh" id="jp4-p7-sDd"/>
+                                    <outlet property="delegate" destination="KEX-vL-gdh" id="xzb-zS-kcf"/>
+                                </connections>
+                            </pickerView>
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9SL-fs-xpU">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <constraints>
@@ -525,34 +532,42 @@
                                     <constraint firstAttribute="height" constant="59" id="m4m-UB-6la"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Donation Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbu-VR-gcG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Donation Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbu-VR-gcG">
                                 <rect key="frame" x="20" y="239" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WUS-Lt-JUE">
-                                <rect key="frame" x="20" y="268" width="335" height="216"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6y5-1s-D17">
+                                <rect key="frame" x="20" y="268" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="KEX-vL-gdh" id="jp4-p7-sDd"/>
-                                    <outlet property="delegate" destination="KEX-vL-gdh" id="xzb-zS-kcf"/>
+                                    <outlet property="delegate" destination="KEX-vL-gdh" id="Zzb-i7-QT4"/>
                                 </connections>
-                            </pickerView>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pTS-UK-PBk" firstAttribute="top" secondItem="9SL-fs-xpU" secondAttribute="bottom" constant="30" id="1sb-ST-HpP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9SL-fs-xpU" secondAttribute="trailing" constant="-20" id="2ei-zh-kZF"/>
                             <constraint firstItem="Yfm-Sy-Iyh" firstAttribute="centerX" secondItem="nnC-wo-6c0" secondAttribute="centerX" id="9TD-wo-J3G"/>
+                            <constraint firstItem="zbu-VR-gcG" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" id="N9i-ia-eAf"/>
                             <constraint firstItem="9SL-fs-xpU" firstAttribute="top" secondItem="O9Q-Q0-LH2" secondAttribute="bottom" id="PZh-wm-nfR"/>
+                            <constraint firstItem="6y5-1s-D17" firstAttribute="top" secondItem="zbu-VR-gcG" secondAttribute="bottom" constant="20" id="Pg1-TR-ihR"/>
                             <constraint firstItem="Yfm-Sy-Iyh" firstAttribute="top" secondItem="pTS-UK-PBk" secondAttribute="bottom" constant="30" id="SN4-Vo-8Ut"/>
+                            <constraint firstItem="zbu-VR-gcG" firstAttribute="top" secondItem="Yfm-Sy-Iyh" secondAttribute="bottom" constant="30" id="Xct-1P-Y4Z"/>
+                            <constraint firstItem="6y5-1s-D17" firstAttribute="trailing" secondItem="nnC-wo-6c0" secondAttribute="trailingMargin" id="gaF-Wt-5Dg"/>
                             <constraint firstItem="pTS-UK-PBk" firstAttribute="trailing" secondItem="nnC-wo-6c0" secondAttribute="trailingMargin" id="kbS-Tn-Cvf"/>
+                            <constraint firstItem="zbu-VR-gcG" firstAttribute="trailing" secondItem="nnC-wo-6c0" secondAttribute="trailingMargin" id="lhx-mO-4tO"/>
                             <constraint firstItem="9SL-fs-xpU" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" constant="-20" id="qet-Fg-d80"/>
+                            <constraint firstItem="6y5-1s-D17" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" id="x1v-Nc-tPd"/>
                             <constraint firstItem="pTS-UK-PBk" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" id="y4f-Al-NYJ"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="donationAmount" destination="6y5-1s-D17" id="P9L-dV-PqD"/>
                         <outlet property="donationPicker" destination="WUS-Lt-JUE" id="UsE-bG-tUB"/>
                         <outlet property="maxCapacity" destination="Mza-eC-rbS" id="dVT-6J-hPf"/>
                     </connections>

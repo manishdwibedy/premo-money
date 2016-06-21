@@ -8,10 +8,11 @@
 
 import UIKit
 
-class HostingPartyViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class HostingPartyViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     @IBOutlet weak var maxCapacity: UILabel!
     @IBOutlet weak var donationPicker: UIPickerView!
     
+    @IBOutlet weak var donationAmount: UITextField!
     var pickerData: [String] = [String]()
     
     @IBAction func valueChanged(sender: UIStepper) {
@@ -25,6 +26,7 @@ class HostingPartyViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         self.donationPicker.delegate = self
         self.donationPicker.dataSource = self
+        self.donationAmount.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,5 +47,12 @@ class HostingPartyViewController: UIViewController, UIPickerViewDelegate, UIPick
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
+    }
+    
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
+    {
+        donationPicker.alpha = 1
+        return false
     }
 }
