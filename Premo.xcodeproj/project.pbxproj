@@ -18,6 +18,8 @@
 		5B04EC9D1D14940300FE6C72 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04EC9C1D14940300FE6C72 /* RegisterViewController.swift */; };
 		5B04EC9F1D14B74600FE6C72 /* utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B04EC9E1D14B74600FE6C72 /* utility.swift */; };
 		5B24B8871D14DC1A0026CF67 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B24B8861D14DC1A0026CF67 /* HomePageViewController.swift */; };
+		5B477E8D1D18CAA4003976BD /* PartyLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B477E8C1D18CAA4003976BD /* PartyLocationViewController.swift */; };
+		5B477E8F1D18CB6E003976BD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B477E8E1D18CB6E003976BD /* MapKit.framework */; };
 		5B845BDB1D186CAA00C1616B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B845BDA1D186CAA00C1616B /* GoogleService-Info.plist */; };
 		5B845BDF1D1895CA00C1616B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B845BDE1D1895CA00C1616B /* SettingsViewController.swift */; };
 		BDD977FB07C3ECDD2A38393E /* Pods_Premo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6848F403B6249BF17C4BCF /* Pods_Premo.framework */; };
@@ -39,6 +41,8 @@
 		5B04EC9C1D14940300FE6C72 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5B04EC9E1D14B74600FE6C72 /* utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utility.swift; sourceTree = "<group>"; };
 		5B24B8861D14DC1A0026CF67 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		5B477E8C1D18CAA4003976BD /* PartyLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyLocationViewController.swift; sourceTree = "<group>"; };
+		5B477E8E1D18CB6E003976BD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5B845BDA1D186CAA00C1616B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B845BDE1D1895CA00C1616B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DA6848F403B6249BF17C4BCF /* Pods_Premo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Premo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B477E8F1D18CB6E003976BD /* MapKit.framework in Frameworks */,
 				5B04EC991D14833700FE6C72 /* FBSDKLoginKit.framework in Frameworks */,
 				5B04EC981D14833700FE6C72 /* FBSDKCoreKit.framework in Frameworks */,
 				5B04EC9A1D14833700FE6C72 /* FBSDKShareKit.framework in Frameworks */,
@@ -80,6 +85,7 @@
 		5B04EC7A1D14811900FE6C72 /* Premo */ = {
 			isa = PBXGroup;
 			children = (
+				5B477E8C1D18CAA4003976BD /* PartyLocationViewController.swift */,
 				5B04EC7B1D14811900FE6C72 /* AppDelegate.swift */,
 				5B04EC7F1D14811900FE6C72 /* Main.storyboard */,
 				5B845BDE1D1895CA00C1616B /* SettingsViewController.swift */,
@@ -118,6 +124,7 @@
 		84E4609975A63A3923849B4E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B477E8E1D18CB6E003976BD /* MapKit.framework */,
 				DA6848F403B6249BF17C4BCF /* Pods_Premo.framework */,
 			);
 			name = Frameworks;
@@ -247,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B04EC9F1D14B74600FE6C72 /* utility.swift in Sources */,
+				5B477E8D1D18CAA4003976BD /* PartyLocationViewController.swift in Sources */,
 				5B04EC9D1D14940300FE6C72 /* RegisterViewController.swift in Sources */,
 				5B04EC7E1D14811900FE6C72 /* ViewController.swift in Sources */,
 				5B24B8871D14DC1A0026CF67 /* HomePageViewController.swift in Sources */,
