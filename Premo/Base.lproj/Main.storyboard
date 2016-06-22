@@ -703,8 +703,12 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFE-eC-l4n">
+                                <rect key="frame" x="16" y="94" width="343" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLN-7u-xC2">
-                                <rect key="frame" x="16" y="94" width="343" height="117"/>
+                                <rect key="frame" x="16" y="154" width="343" height="117"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="GQZ-9h-TVc"/>
@@ -720,9 +724,18 @@
                             <constraint firstItem="JLN-7u-xC2" firstAttribute="leading" secondItem="6rG-af-iOJ" secondAttribute="leadingMargin" id="FRn-cc-HWP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="edR-1d-134" secondAttribute="trailing" constant="-20" id="TmD-B2-grf"/>
                             <constraint firstItem="JLN-7u-xC2" firstAttribute="top" secondItem="edR-1d-134" secondAttribute="bottom" constant="30" id="V5m-Ry-dgW"/>
+                            <constraint firstItem="gFE-eC-l4n" firstAttribute="trailing" secondItem="6rG-af-iOJ" secondAttribute="trailingMargin" id="hiw-Yf-xTK"/>
                             <constraint firstItem="JLN-7u-xC2" firstAttribute="trailing" secondItem="6rG-af-iOJ" secondAttribute="trailingMargin" id="iPj-yK-K9M"/>
+                            <constraint firstItem="gFE-eC-l4n" firstAttribute="top" secondItem="edR-1d-134" secondAttribute="bottom" constant="30" id="jI9-J7-YFl"/>
                             <constraint firstItem="edR-1d-134" firstAttribute="leading" secondItem="6rG-af-iOJ" secondAttribute="leadingMargin" constant="-20" id="k54-aE-DIe"/>
+                            <constraint firstItem="gFE-eC-l4n" firstAttribute="leading" secondItem="6rG-af-iOJ" secondAttribute="leadingMargin" id="nYY-5L-qeU"/>
+                            <constraint firstItem="JLN-7u-xC2" firstAttribute="top" secondItem="gFE-eC-l4n" secondAttribute="bottom" constant="30" id="vtS-8e-g0f"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="V5m-Ry-dgW"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
