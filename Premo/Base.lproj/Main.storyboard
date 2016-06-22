@@ -618,7 +618,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IHw-rC-cCF" customClass="PartyLoca">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IHw-rC-cCF">
                                 <rect key="frame" x="16" y="64" width="343" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="enS-va-kgF"/>
@@ -628,6 +628,9 @@
                                     <segment title="Sativa"/>
                                     <segment title="Indigo"/>
                                 </segments>
+                                <connections>
+                                    <action selector="typeChanged:" destination="OKZ-sJ-Ecf" eventType="valueChanged" id="4R2-bl-UK5"/>
+                                </connections>
                             </segmentedControl>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ouo-y0-ytN">
                                 <rect key="frame" x="-4" y="97" width="383" height="570"/>
@@ -666,7 +669,7 @@
         <image name="settings" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="adm-PH-R1g"/>
         <segue reference="eYb-X6-y9H"/>
-        <segue reference="9kD-ub-xa4"/>
     </inferredMetricsTieBreakers>
 </document>

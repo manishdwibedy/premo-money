@@ -13,7 +13,8 @@ import CoreLocation
 class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
     @IBOutlet weak var map: MKMapView!
     var locationManager: CLLocationManager!
-
+    var annotations = [MKAnnotation]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,8 +40,6 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         
         map.showsUserLocation = true
         
-        var annotations = [MKAnnotation]()
-        
         for i in [1,2,3,4,5]{
             let party_hybrid = Party(title: "Party \(i) (H)",
                               coordinate: CLLocationCoordinate2D(latitude: 34.049297 + 0.02 * Double(i), longitude: -118.253770 + 0.002 * Double(i)),
@@ -62,6 +61,8 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         map.addAnnotations(annotations)
         
         map.delegate = self
+        
+        showParty("H")
 
     }
     
@@ -137,5 +138,33 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         presentViewController(ac, animated: true, completion: nil)
     }
-    
+    @IBAction func typeChanged(sender: UISegmentedControl) {
+        print(sender.selectedSegmentIndex)
+        switch sender.selectedSegmentIndex {
+            case 0:
+                showParty("H")
+            case 1:
+                showParty("S")
+            case 2:
+                showParty("I")
+            default:
+                print("Error!")
+        }
+
     }
+    
+    func showParty(type: String){
+        self.map.removeAnnotations(self.annotations)
+        var filteredAnnotations = [MKAnnotation]()
+        
+        for annotation in self.annotations{
+            let annotation = annotation as! Party
+            if annotation.type == type{
+                filteredAnnotations.append(annotation)
+            }
+            
+        }
+        map.addAnnotations(filteredAnnotations)
+
+    }
+}
