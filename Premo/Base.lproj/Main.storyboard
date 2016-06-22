@@ -679,7 +679,7 @@
         <!--Party Description-->
         <scene sceneID="dBQ-xa-5Av">
             <objects>
-                <viewController title="Party Description" id="wKr-eg-CH6" sceneMemberID="viewController">
+                <viewController title="Party Description" id="wKr-eg-CH6" customClass="PartyDescrptionViewController" customModule="Premo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gvj-bc-NTy"/>
                         <viewControllerLayoutGuide type="bottom" id="xao-12-ydJ"/>

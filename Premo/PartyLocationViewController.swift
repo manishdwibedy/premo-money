@@ -16,6 +16,8 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
     @IBOutlet weak var map: MKMapView!
     var locationManager: CLLocationManager!
     var annotations = [MKAnnotation]()
+    var selectedParty: Party?
+    var isPartySelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -155,18 +157,22 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
     }
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        let capital = view.annotation as! Party
-        let placeName = capital.title
-        let placeInfo = capital.info
+        let party = view.annotation as! Party
+        let placeName = party.title
+        let placeInfo = party.info
+        
         
         let ac = UIAlertController(title: placeName, message: placeInfo, preferredStyle: .Alert)
         
         // Create the actions
         let okAction = UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
+            self.isPartySelected = true
+            self.selectedParty = party
             self.showPartyDescription()
         })
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
-        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: { (action: UIAlertAction!) in
+            self.isPartySelected = false
+        })
         // Add the actions
         ac.addAction(okAction)
         ac.addAction(cancelAction)
@@ -205,5 +211,16 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
     func showPartyDescription(){
         print("segue!!")
         self.performSegueWithIdentifier("showPartyDescription", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "showPartyDescription") {
+            //get a reference to the destination view controller
+            let destinationVC:PartyDescrptionViewController = segue.destinationViewController as! PartyDescrptionViewController
+            
+            if(self.isPartySelected){
+                destinationVC.party = self.selectedParty
+            }
+        }
     }
 }
