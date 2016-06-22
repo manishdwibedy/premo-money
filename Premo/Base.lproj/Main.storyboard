@@ -694,7 +694,13 @@
                                     <constraint firstAttribute="height" constant="44" id="cTY-j5-12q"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Party Name" id="DiZ-nS-AvR"/>
+                                    <navigationItem title="Party Name" id="DiZ-nS-AvR">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="pe0-0k-Rls">
+                                            <connections>
+                                                <segue destination="OKZ-sJ-Ecf" kind="showDetail" id="i92-Da-k2g"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -720,6 +726,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="eYb-X6-y9H"/>
         <segue reference="adm-PH-R1g"/>
-        <segue reference="eyT-ve-zoZ"/>
+        <segue reference="i92-Da-k2g"/>
     </inferredMetricsTieBreakers>
 </document>
