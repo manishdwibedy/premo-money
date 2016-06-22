@@ -669,16 +669,17 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="map" destination="Ouo-y0-ytN" id="cvg-q9-mPg"/>
+                        <segue destination="wKr-eg-CH6" kind="showDetail" identifier="showPartyDescription" id="Rwb-zv-ub2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HEa-y6-rcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1322.5" y="387.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Party Description-->
         <scene sceneID="dBQ-xa-5Av">
             <objects>
-                <viewController id="wKr-eg-CH6" sceneMemberID="viewController">
+                <viewController title="Party Description" id="wKr-eg-CH6" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gvj-bc-NTy"/>
                         <viewControllerLayoutGuide type="bottom" id="xao-12-ydJ"/>
@@ -718,7 +719,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eYb-X6-y9H"/>
-        <segue reference="9kD-ub-xa4"/>
+        <segue reference="adm-PH-R1g"/>
         <segue reference="eyT-ve-zoZ"/>
     </inferredMetricsTieBreakers>
 </document>
