@@ -204,5 +204,6 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
     
     func showPartyDescription(){
         print("segue!!")
+        self.performSegueWithIdentifier("showPartyDescription", sender: nil)
     }
 }
