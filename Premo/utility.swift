@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import CryptoSwift
 import FirebaseAuth
+import MapKit
+import FirebaseDatabase
 
 class Util{
     
@@ -101,4 +103,27 @@ class Util{
         let uid = FIRAuth.auth()?.currentUser?.uid
         return "\(uid!)::\(partyID)"
     }
+    
+    static func getCoordinates(user_data: [String:String], uid: String, db_ref: FIRDatabaseReference){
+        let geocoder = CLGeocoder()
+        
+        geocoder.geocodeAddressString(user_data["address"]!, completionHandler: {(placemarks, error) -> Void in
+            if((error) != nil){
+                print("Error", error)
+            }
+            if let placemark = placemarks?.first {
+                let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
+                print(coordinates)
+                
+                var coordinateData = user_data
+                
+                coordinateData["lat"] = String(coordinates.latitude)
+                coordinateData["long"] = String(coordinates.longitude)
+                
+                db_ref.child("user_info").child(uid).setValue(coordinateData)
+                
+            }
+        })
+    }
+    
 }

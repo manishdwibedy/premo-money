@@ -31,10 +31,10 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
             
             let user_data = data[self.uid!]!
             
-            self.dob.text = user_data["dob"]!! as! String
-            self.address.text = user_data["address"]!! as! String
-            self.username.text = user_data["username"]!! as! String
-            // ...
+            print(user_data)
+            self.dob.text = user_data["dob"]!! as? String
+            self.address.text = user_data["address"]!! as? String
+            self.username.text = user_data["username"]!! as? String
         })
         
         dob.delegate = self
@@ -77,7 +77,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
             "dob" : dob.text!,
             "address": address.text!
         ]
-        db_ref.child("user_info").child(uid!).setValue(user_data)
+        //db_ref.child("user_info").child(uid!).setValue(user_data)
+        Util.getCoordinates(user_data, uid: uid!, db_ref: db_ref)
         
     }
 }
