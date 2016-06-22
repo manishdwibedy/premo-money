@@ -160,7 +160,17 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         let placeInfo = capital.info
         
         let ac = UIAlertController(title: placeName, message: placeInfo, preferredStyle: .Alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        
+        // Create the actions
+        let okAction = UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
+            self.showPartyDescription()
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        
+        // Add the actions
+        ac.addAction(okAction)
+        ac.addAction(cancelAction)
+
         presentViewController(ac, animated: true, completion: nil)
     }
     @IBAction func typeChanged(sender: UISegmentedControl) {
@@ -190,5 +200,9 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         }
         map.addAnnotations(filteredAnnotations)
 
+    }
+    
+    func showPartyDescription(){
+        print("segue!!")
     }
 }
