@@ -139,7 +139,6 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         presentViewController(ac, animated: true, completion: nil)
     }
     @IBAction func typeChanged(sender: UISegmentedControl) {
-        print(sender.selectedSegmentIndex)
         switch sender.selectedSegmentIndex {
             case 0:
                 showParty("H")
