@@ -16,6 +16,7 @@ class PartyDescrptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.topItem?.title = party?.title
+        partyDescription.text = party?.info
         // Do any additional setup after loading the view, typically from a nib.
     }
     override func didReceiveMemoryWarning() {
