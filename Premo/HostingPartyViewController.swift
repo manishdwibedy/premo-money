@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class HostingPartyViewController: UIViewController {
     let partyID = Util.getPartyIdentifier()
@@ -29,15 +30,27 @@ class HostingPartyViewController: UIViewController {
     }
     
     @IBAction func hostParty(sender: UIButton) {
-        print(maxCapacity.text!)
-        print(donationSlider.value)
+        let uid = FIRAuth.auth()?.currentUser?.uid
+        let userInfoRef = db_ref.child("user_info")
         
-        let party_data = [
-            "capacity": Int(maxCapacity.text!)!,
-            "donations" : donationSlider.value,
-        ]
-        db_ref.child("party").child(partyID).setValue(party_data)
-        
+        let _ = userInfoRef.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            let data = snapshot.value as! [String : AnyObject]
+            
+            let user_data = data[uid!]!
+            
+            let lat = user_data["lat"]!
+            let long = user_data["long"]!
+            
+            let party_data = [
+                "capacity": Int(self.maxCapacity.text!)!,
+                "donations" : self.donationSlider.value,
+                "lat": String(lat!),
+                "long": String(long!)
+            ]
+            self.db_ref.child("party").child(self.partyID).setValue(party_data)
+            
+            
+        })
         
     }
     override func viewDidLoad() {
