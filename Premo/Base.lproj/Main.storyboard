@@ -549,12 +549,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5B-06-Zlj">
-                                <rect key="frame" x="16" y="426" width="343" height="30"/>
+                                <rect key="frame" x="16" y="474" width="343" height="30"/>
                                 <state key="normal" title="HOST"/>
                                 <connections>
                                     <action selector="hostParty:" destination="KEX-vL-gdh" eventType="touchUpInside" id="qQA-Hr-zqW"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lQ5-tp-Uvz">
+                                <rect key="frame" x="16" y="411" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Hybrid"/>
+                                    <segment title="Sativa"/>
+                                    <segment title="Indigo"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -562,6 +570,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="9SL-fs-xpU" secondAttribute="trailing" constant="-20" id="2ei-zh-kZF"/>
                             <constraint firstItem="KZb-Lt-osM" firstAttribute="trailing" secondItem="nnC-wo-6c0" secondAttribute="trailingMargin" id="60R-ER-EYq"/>
                             <constraint firstItem="Yfm-Sy-Iyh" firstAttribute="centerX" secondItem="nnC-wo-6c0" secondAttribute="centerX" id="9TD-wo-J3G"/>
+                            <constraint firstItem="A5B-06-Zlj" firstAttribute="top" secondItem="lQ5-tp-Uvz" secondAttribute="bottom" constant="35" id="EWC-RJ-cz9"/>
                             <constraint firstItem="zbu-VR-gcG" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" id="N9i-ia-eAf"/>
                             <constraint firstItem="A5B-06-Zlj" firstAttribute="trailing" secondItem="nnC-wo-6c0" secondAttribute="trailingMargin" id="Oe4-a3-gJw"/>
                             <constraint firstItem="9SL-fs-xpU" firstAttribute="top" secondItem="O9Q-Q0-LH2" secondAttribute="bottom" id="PZh-wm-nfR"/>
@@ -569,13 +578,15 @@
                             <constraint firstItem="Yfm-Sy-Iyh" firstAttribute="top" secondItem="pTS-UK-PBk" secondAttribute="bottom" constant="30" id="SN4-Vo-8Ut"/>
                             <constraint firstItem="KZb-Lt-osM" firstAttribute="top" secondItem="tc5-eX-zLM" secondAttribute="bottom" constant="35" id="TjS-e5-Teb"/>
                             <constraint firstItem="zbu-VR-gcG" firstAttribute="top" secondItem="Yfm-Sy-Iyh" secondAttribute="bottom" constant="30" id="Xct-1P-Y4Z"/>
-                            <constraint firstItem="A5B-06-Zlj" firstAttribute="top" secondItem="KZb-Lt-osM" secondAttribute="bottom" constant="50" id="b4U-vs-viE"/>
+                            <constraint firstItem="lQ5-tp-Uvz" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" id="a4V-lO-Ggg"/>
                             <constraint firstItem="A5B-06-Zlj" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" id="hxP-Ti-3Hf"/>
                             <constraint firstItem="pTS-UK-PBk" firstAttribute="trailing" secondItem="nnC-wo-6c0" secondAttribute="trailingMargin" id="kbS-Tn-Cvf"/>
+                            <constraint firstItem="lQ5-tp-Uvz" firstAttribute="trailing" secondItem="nnC-wo-6c0" secondAttribute="trailingMargin" id="l0U-Bd-mQU"/>
                             <constraint firstItem="zbu-VR-gcG" firstAttribute="trailing" secondItem="nnC-wo-6c0" secondAttribute="trailingMargin" id="lhx-mO-4tO"/>
                             <constraint firstItem="9SL-fs-xpU" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" constant="-20" id="qet-Fg-d80"/>
                             <constraint firstItem="KZb-Lt-osM" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" id="tLZ-bp-klC"/>
                             <constraint firstItem="tc5-eX-zLM" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" id="tnz-UP-Q8D"/>
+                            <constraint firstItem="lQ5-tp-Uvz" firstAttribute="top" secondItem="KZb-Lt-osM" secondAttribute="bottom" constant="35" id="ubA-Yu-l1T"/>
                             <constraint firstItem="pTS-UK-PBk" firstAttribute="leading" secondItem="nnC-wo-6c0" secondAttribute="leadingMargin" id="y4f-Al-NYJ"/>
                             <constraint firstItem="tc5-eX-zLM" firstAttribute="top" secondItem="zbu-VR-gcG" secondAttribute="bottom" constant="35" id="yMP-d5-eHo"/>
                         </constraints>
@@ -585,6 +596,7 @@
                         <outlet property="currentDonationAmount" destination="KZb-Lt-osM" id="NFI-Op-4Za"/>
                         <outlet property="donationSlider" destination="tc5-eX-zLM" id="Iy3-38-5ok"/>
                         <outlet property="maxCapacity" destination="Mza-eC-rbS" id="dVT-6J-hPf"/>
+                        <outlet property="partyType" destination="lQ5-tp-Uvz" id="Qgj-Oe-iBk"/>
                         <segue destination="OKZ-sJ-Ecf" kind="showDetail" identifier="showPartyOnMap" id="eyT-ve-zoZ"/>
                     </connections>
                 </viewController>
@@ -619,8 +631,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IHw-rC-cCF">
-                                <rect key="frame" x="6" y="64" width="369" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IHw-rC-cCF">
+                                <rect key="frame" x="-4" y="64" width="383" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="enS-va-kgF"/>
                                 </constraints>
