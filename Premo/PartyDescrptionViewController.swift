@@ -10,9 +10,11 @@ import UIKit
 
 class PartyDescrptionViewController: UIViewController {
     var party: Party?
+    
+    @IBOutlet weak var navigationBar: UINavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationBar.topItem?.title = party?.title
         // Do any additional setup after loading the view, typically from a nib.
     }
     override func didReceiveMemoryWarning() {
