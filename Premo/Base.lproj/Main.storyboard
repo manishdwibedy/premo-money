@@ -618,8 +618,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IHw-rC-cCF">
-                                <rect key="frame" x="16" y="64" width="343" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IHw-rC-cCF">
+                                <rect key="frame" x="6" y="64" width="369" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="enS-va-kgF"/>
                                 </constraints>
@@ -644,11 +644,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="hCn-rY-Lk6" secondAttribute="trailing" constant="-20" id="D41-2K-Cr6"/>
                             <constraint firstItem="hCn-rY-Lk6" firstAttribute="leading" secondItem="oyc-It-CRf" secondAttribute="leadingMargin" constant="-20" id="DE4-oL-0n2"/>
                             <constraint firstItem="IHw-rC-cCF" firstAttribute="top" secondItem="hCn-rY-Lk6" secondAttribute="bottom" id="FrM-Xs-zhM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IHw-rC-cCF" secondAttribute="trailing" constant="-20" id="KmF-ae-zQy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ouo-y0-ytN" secondAttribute="trailing" constant="-20" id="Ppa-cT-BpJ"/>
-                            <constraint firstItem="IHw-rC-cCF" firstAttribute="trailing" secondItem="oyc-It-CRf" secondAttribute="trailingMargin" id="T2c-xh-Olo"/>
                             <constraint firstItem="Ouo-y0-ytN" firstAttribute="top" secondItem="IHw-rC-cCF" secondAttribute="bottom" constant="5" id="V3A-gw-Q90"/>
-                            <constraint firstItem="IHw-rC-cCF" firstAttribute="leading" secondItem="oyc-It-CRf" secondAttribute="leadingMargin" id="Wd8-4c-qOo"/>
                             <constraint firstItem="Ouo-y0-ytN" firstAttribute="leading" secondItem="oyc-It-CRf" secondAttribute="leadingMargin" constant="-20" id="gO6-WW-2ga"/>
+                            <constraint firstItem="IHw-rC-cCF" firstAttribute="leading" secondItem="oyc-It-CRf" secondAttribute="leadingMargin" constant="-20" id="jYe-Eb-ljn"/>
                             <constraint firstItem="hCn-rY-Lk6" firstAttribute="top" secondItem="Jyo-vG-HnL" secondAttribute="bottom" id="rxe-nQ-GcN"/>
                             <constraint firstItem="lxH-F2-Zud" firstAttribute="top" secondItem="Ouo-y0-ytN" secondAttribute="bottom" id="wE4-bn-EFg"/>
                         </constraints>
