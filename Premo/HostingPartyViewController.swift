@@ -49,6 +49,8 @@ class HostingPartyViewController: UIViewController {
             ]
             self.db_ref.child("party").child(self.partyID).setValue(party_data)
             
+            self.performSegueWithIdentifier("showPartyOnMap", sender: nil)
+
             
         })
         
