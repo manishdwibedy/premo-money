@@ -12,6 +12,7 @@ class PartyDescrptionViewController: UIViewController {
     var party: Party?
     
     @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var partyDescription: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.topItem?.title = party?.title
@@ -20,6 +21,11 @@ class PartyDescrptionViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        partyDescription.setContentOffset(CGPointZero, animated: false)
     }
     
     

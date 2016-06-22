@@ -727,6 +727,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="navigationBar" destination="edR-1d-134" id="4vR-BL-2Qb"/>
+                        <outlet property="partyDescription" destination="JLN-7u-xC2" id="EoR-YA-knO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EcF-Fc-h5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
