@@ -688,8 +688,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="edR-1d-134">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edR-1d-134">
+                                <rect key="frame" x="-4" y="20" width="383" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="cTY-j5-12q"/>
                                 </constraints>
