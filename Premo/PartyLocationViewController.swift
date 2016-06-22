@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 import CoreLocation
+import FirebaseDatabase
+import FirebaseAuth
 
 class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
     @IBOutlet weak var map: MKMapView!
@@ -40,30 +42,53 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         
         map.showsUserLocation = true
         
-        for i in [1,2,3,4,5]{
-            let party_hybrid = Party(title: "Party \(i) (H)",
-                              coordinate: CLLocationCoordinate2D(latitude: 34.049297 + 0.02 * Double(i), longitude: -118.253770 + 0.002 * Double(i)),
-                              info: "Description for party \(i) would come here",
-                              type:"H")
-            let party_sativa = Party(title: "Party \(i) (S)",
-                              coordinate: CLLocationCoordinate2D(latitude: 34.049297 + 0.01 * Double(i), longitude: -118.253770 + 0.004 * Double(i)),
-                              info: "Description for party \(i) would come here",
-                              type:"S")
-            let party_indigo = Party(title: "Party \(i) (I)",
-                              coordinate: CLLocationCoordinate2D(latitude: 34.049297 + 0.03 * Double(i), longitude: -118.253770 + 0.008 * Double(i)),
-                              info: "Description for party \(i) would come here",
-                              type:"I")
-            annotations.append(party_hybrid)
-            annotations.append(party_sativa)
-            annotations.append(party_indigo)
-        }
+        let db_ref = FIRDatabase.database().reference()
         
-        map.addAnnotations(annotations)
+        let settingRef = db_ref.child("party")
+        
+        var count = 1
+        let _ = settingRef.observeSingleEventOfType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            let party_data = snapshot.value as! [String : AnyObject]
+            
+            for (_, partyData) in party_data{
+                let party_dict = partyData as? NSDictionary
+                
+                let lat = party_dict!["lat"] as! String
+                let long = party_dict!["long"] as! String
+                let type = party_dict!["type"] as! String
+                
+                let party = Party(title: "Party \(count)",
+                    coordinate: CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!),
+                    info: "Description for party \(count) would come here",
+                    type:type)
+                self.annotations.append(party)
+            }
+            self.map.addAnnotations(self.annotations)
+            
+            self.showParty("H")
+            count += 1
+            
+        })
+        
+//        for i in [1,2,3,4,5]{
+//            let party_hybrid = Party(title: "Party \(i) (H)",
+//                              coordinate: CLLocationCoordinate2D(latitude: 34.049297 + 0.02 * Double(i), longitude: -118.253770 + 0.002 * Double(i)),
+//                              info: "Description for party \(i) would come here",
+//                              type:"H")
+//            let party_sativa = Party(title: "Party \(i) (S)",
+//                              coordinate: CLLocationCoordinate2D(latitude: 34.049297 + 0.01 * Double(i), longitude: -118.253770 + 0.004 * Double(i)),
+//                              info: "Description for party \(i) would come here",
+//                              type:"S")
+//            let party_indigo = Party(title: "Party \(i) (I)",
+//                              coordinate: CLLocationCoordinate2D(latitude: 34.049297 + 0.03 * Double(i), longitude: -118.253770 + 0.008 * Double(i)),
+//                              info: "Description for party \(i) would come here",
+//                              type:"I")
+//            annotations.append(party_hybrid)
+//            annotations.append(party_sativa)
+//            annotations.append(party_indigo)
+//        }
         
         map.delegate = self
-        
-        showParty("H")
-
     }
     
     override func didReceiveMemoryWarning() {
