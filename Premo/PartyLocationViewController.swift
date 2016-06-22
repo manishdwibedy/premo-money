@@ -42,10 +42,21 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         var annotations = [MKAnnotation]()
         
         for i in [1,2,3,4,5]{
-            let party = Party(title: "Party \(i)",
+            let party_hybrid = Party(title: "Party \(i) (H)",
+                              coordinate: CLLocationCoordinate2D(latitude: 34.049297 + 0.02 * Double(i), longitude: -118.253770 + 0.002 * Double(i)),
+                              info: "Description for party \(i) would come here",
+                              type:"H")
+            let party_sativa = Party(title: "Party \(i) (S)",
                               coordinate: CLLocationCoordinate2D(latitude: 34.049297 + 0.01 * Double(i), longitude: -118.253770 + 0.004 * Double(i)),
-                              info: "Description for party \(i) would come here")
-            annotations.append(party)
+                              info: "Description for party \(i) would come here",
+                              type:"S")
+            let party_indigo = Party(title: "Party \(i) (I)",
+                              coordinate: CLLocationCoordinate2D(latitude: 34.049297 + 0.03 * Double(i), longitude: -118.253770 + 0.008 * Double(i)),
+                              info: "Description for party \(i) would come here",
+                              type:"I")
+            annotations.append(party_hybrid)
+            annotations.append(party_sativa)
+            annotations.append(party_indigo)
         }
         
         map.addAnnotations(annotations)
