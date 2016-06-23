@@ -63,8 +63,10 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             
             let user_data = data[self.uid!]!
             
-            let user_description = user_data["description"]!! as? String
-            self.userDescription.text = user_description!
+            if let user_description = user_data["description"]! as? String{
+                        self.userDescription.text = user_description
+            }
+            
         })
     }
     
