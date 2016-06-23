@@ -124,11 +124,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         var username = self.username.text!
         var password = self.password.text!
         
+        // User 1
         if username.characters.count == 0 || password.characters.count == 0{
             username = "manish.dwibedy@gmail.com"
             password = "Qwerty@123"
         }
-        
+        // User 2
+//        if username.characters.count == 0 || password.characters.count == 0{
+//            username = "test@test.com"
+//            password = "Asdf@1234"
+//        }
         FIRAuth.auth()?.signInWithEmail(username, password: Util.salt(password)) { (user, error) in
             if user != nil{
                 print(user!.displayName)
