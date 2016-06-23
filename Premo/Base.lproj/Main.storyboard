@@ -80,20 +80,6 @@
                                     <action selector="facebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nHr-W9-Ffv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cb-mT-utw">
-                                <rect key="frame" x="16" y="488" width="343" height="30"/>
-                                <state key="normal" title="Party Locations"/>
-                                <connections>
-                                    <segue destination="OKZ-sJ-Ecf" kind="show" id="2LQ-dB-JDs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wh3-29-wjg">
-                                <rect key="frame" x="16" y="548" width="343" height="30"/>
-                                <state key="normal" title="Host a party"/>
-                                <connections>
-                                    <segue destination="KEX-vL-gdh" kind="show" id="E4q-Da-9vI"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -103,17 +89,12 @@
                             <constraint firstItem="djk-67-rz6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Anz-FN-j0y"/>
                             <constraint firstItem="0Mh-xS-b1A" firstAttribute="top" secondItem="04E-yN-sc2" secondAttribute="bottom" constant="30" id="D4j-Lo-4W8"/>
                             <constraint firstItem="X7r-cI-QiH" firstAttribute="top" secondItem="hTE-GS-yi6" secondAttribute="bottom" constant="50" id="Gr3-n8-qao"/>
-                            <constraint firstItem="Wh3-29-wjg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="H3s-1h-oes"/>
                             <constraint firstItem="04E-yN-sc2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KHs-QD-fBn"/>
                             <constraint firstItem="9PQ-cz-2Zt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KrN-MI-Tj2"/>
-                            <constraint firstItem="Wh3-29-wjg" firstAttribute="top" secondItem="4Cb-mT-utw" secondAttribute="bottom" constant="30" id="OTy-DF-fIN"/>
                             <constraint firstItem="04E-yN-sc2" firstAttribute="top" secondItem="jP4-28-kkh" secondAttribute="bottom" constant="75" id="OrO-L7-LJF"/>
-                            <constraint firstItem="4Cb-mT-utw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WkE-23-yAl"/>
-                            <constraint firstItem="4Cb-mT-utw" firstAttribute="top" secondItem="9PQ-cz-2Zt" secondAttribute="bottom" constant="40" id="YHo-MQ-ns5"/>
                             <constraint firstItem="jP4-28-kkh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="YKz-Lv-Vp6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="djk-67-rz6" secondAttribute="bottom" constant="8" id="Ye5-CR-fdu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="djk-67-rz6" secondAttribute="trailing" constant="-1" id="Yhr-0M-Eh3"/>
-                            <constraint firstItem="4Cb-mT-utw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZNJ-IN-Vsa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Mh-xS-b1A" secondAttribute="trailing" id="ctI-SW-E1f"/>
                             <constraint firstItem="jP4-28-kkh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ibW-tB-UgF"/>
                             <constraint firstItem="hTE-GS-yi6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kOI-lb-BeG"/>
@@ -123,7 +104,6 @@
                             <constraint firstItem="X7r-cI-QiH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rsr-eQ-ceg"/>
                             <constraint firstItem="0Mh-xS-b1A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sms-PE-h6K"/>
                             <constraint firstItem="jP4-28-kkh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="x5Q-AZ-AX2"/>
-                            <constraint firstItem="Wh3-29-wjg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zW6-J7-Tub"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -254,6 +234,20 @@
                                     <outlet property="delegate" destination="A5A-e5-Meq" id="oAF-pF-tCO"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQA-5C-va2">
+                                <rect key="frame" x="272" y="104" width="46" height="30"/>
+                                <state key="normal" title="Host"/>
+                                <connections>
+                                    <segue destination="KEX-vL-gdh" kind="showDetail" id="TvT-MS-83o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEB-YR-ZZu">
+                                <rect key="frame" x="48" y="104" width="46" height="30"/>
+                                <state key="normal" title="Join"/>
+                                <connections>
+                                    <segue destination="OKZ-sJ-Ecf" kind="showDetail" id="HF5-sH-60w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -811,7 +805,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eYb-X6-y9H"/>
-        <segue reference="adm-PH-R1g"/>
-        <segue reference="i92-Da-k2g"/>
+        <segue reference="9kD-ub-xa4"/>
+        <segue reference="HF5-sH-60w"/>
     </inferredMetricsTieBreakers>
 </document>
