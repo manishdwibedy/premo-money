@@ -538,6 +538,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5h-0L-Cme">
                                 <rect key="frame" x="16" y="414" width="343" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addMenu:" destination="hXc-OM-j3l" eventType="touchUpInside" id="Y02-2W-11w"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -569,6 +572,11 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="menu_desc" destination="Lej-H8-tc2" id="8su-Oi-drq"/>
+                        <outlet property="menu_item" destination="tyX-BF-hCR" id="sdd-IA-bzd"/>
+                        <outlet property="party_type" destination="erD-b8-EsA" id="2z6-Jg-7mP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbh-mN-xib" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
