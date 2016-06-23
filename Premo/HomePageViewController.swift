@@ -56,6 +56,16 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         
         userDescription.delegate = self
         
+        let userInfoRef = db_ref.child("user_info")
+        
+        let _ = userInfoRef.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            let data = snapshot.value as! [String : AnyObject]
+            
+            let user_data = data[self.uid!]!
+            
+            let user_description = user_data["description"]!! as? String
+            self.userDescription.text = user_description!
+        })
     }
     
     override func didReceiveMemoryWarning() {
