@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextViewDelegate {
     var parties = [[String:String]]()
     var filteredRows = [[String:String]]()
     let partyCount = 10
@@ -49,6 +49,8 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         
         // By default, get Indigo
         getFilteredContent("I")
+        
+        userDescription.delegate = self
         
     }
     
@@ -98,9 +100,29 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.reloadData()
         
     }
-
+    
+    var isEditingDescription = false
+    @IBOutlet weak var userDescription: UITextView!
     @IBOutlet weak var descriptionButton: UIButton!
     @IBAction func editDescription(sender: AnyObject) {
-        print("editing..")
+        // Save the description
+        if isEditingDescription{
+            print("saving..")
+            userDescription.editable = false
+            userDescription.selectable = false
+            self.changeButtonText("Edit")
+        }
+        // Start editing
+        else{
+            print("editing..")
+            userDescription.editable = true
+            userDescription.selectable = true
+            self.changeButtonText("Save")
+        }
+        isEditingDescription = !isEditingDescription
+    }
+    
+    func changeButtonText(label: String){
+        descriptionButton.setTitle(label, forState: .Normal)
     }
 }

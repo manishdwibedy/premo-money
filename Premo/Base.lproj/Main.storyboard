@@ -214,6 +214,9 @@
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="A5A-e5-Meq" id="60I-gX-BNS"/>
+                                </connections>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Party Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jar-6n-Cyz">
                                 <rect key="frame" x="16" y="395" width="110" height="40"/>
@@ -320,6 +323,7 @@
                     <connections>
                         <outlet property="descriptionButton" destination="auH-0b-SRe" id="X2V-HO-lU7"/>
                         <outlet property="tableView" destination="jZs-EX-ADY" id="L3E-sC-y2A"/>
+                        <outlet property="userDescription" destination="8aN-yI-qTs" id="m1W-4E-Tta"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEm-h7-9on" userLabel="First Responder" sceneMemberID="firstResponder"/>
