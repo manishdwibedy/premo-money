@@ -13,6 +13,7 @@ class PartyDescrptionViewController: UIViewController {
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var partyDescription: UITextView!
+//    @IBOutlet weak var partyDescription: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.topItem?.title = party?.title
