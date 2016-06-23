@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class PartyDescrptionViewController: UIViewController {
     var party: Party?
+    let db_ref = FIRDatabase.database().reference()
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var partyDescription: UITextView!
@@ -32,6 +35,16 @@ class PartyDescrptionViewController: UIViewController {
     
     @IBAction func joinParty(sender: UIButton) {
         print("Joining the party")
+        
+        let host = party?.host
+        let timestamp = party?.timestamp
+        let party_ID = "\(host!)::\(timestamp!)"
+        
+        let uid = FIRAuth.auth()?.currentUser!.uid
+        party!.addGuest(uid!)
+
+        self.db_ref.child("party/\(party_ID)/guests").setValue(party?.guests)
+
     }
     
 }
