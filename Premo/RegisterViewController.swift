@@ -87,6 +87,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             }
             else{
                 print("User registration failed")
+                let error_message = error?.userInfo["NSLocalizedDescription"]! as! String
+                self.showAlert("User Registration failed", message: error_message)
             }
         }
         
