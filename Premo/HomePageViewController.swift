@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class HomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextViewDelegate {
     var parties = [[String:String]]()
     var filteredRows = [[String:String]]()
     let partyCount = 10
     let types = ["I", "H", "S"]
+    let db_ref = FIRDatabase.database().reference()
+    let uid = FIRAuth.auth()?.currentUser?.uid
     
     @IBAction func typeChanged(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex
@@ -111,6 +115,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             userDescription.editable = false
             userDescription.selectable = false
             self.changeButtonText("Edit")
+            self.saveDescription(userDescription.text)
         }
         // Start editing
         else{
@@ -124,5 +129,9 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func changeButtonText(label: String){
         descriptionButton.setTitle(label, forState: .Normal)
+    }
+    
+    func saveDescription(description: String){
+        self.db_ref.child("user_info/\(uid!)/description").setValue(description)
     }
 }
