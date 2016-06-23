@@ -201,6 +201,9 @@
                                     <constraint firstAttribute="height" constant="30" id="iFR-Xy-E0x"/>
                                 </constraints>
                                 <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editDescription:" destination="A5A-e5-Meq" eventType="touchUpInside" id="ibx-Rr-A9B"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aN-yI-qTs">
                                 <rect key="frame" x="16" y="257" width="343" height="128"/>
@@ -315,6 +318,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="descriptionButton" destination="auH-0b-SRe" id="X2V-HO-lU7"/>
                         <outlet property="tableView" destination="jZs-EX-ADY" id="L3E-sC-y2A"/>
                     </connections>
                 </viewController>

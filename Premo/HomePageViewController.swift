@@ -99,4 +99,8 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
 
+    @IBOutlet weak var descriptionButton: UIButton!
+    @IBAction func editDescription(sender: AnyObject) {
+        print("editing..")
+    }
 }
