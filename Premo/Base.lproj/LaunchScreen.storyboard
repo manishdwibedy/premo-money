@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,7 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PREMO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ob-w4-9f1">
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="2c2-0M-y4g">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sticky Green" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ob-w4-9f1">
                                 <rect key="frame" x="20" y="305" width="335" height="58"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -26,6 +30,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2c2-0M-y4g" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="GJF-Br-hSw"/>
+                            <constraint firstItem="2c2-0M-y4g" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="P2s-ep-rje"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="2c2-0M-y4g" secondAttribute="bottom" id="W60-P9-Ptg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2c2-0M-y4g" secondAttribute="trailing" constant="-20" id="fCz-ts-wi6"/>
                             <constraint firstItem="6ob-w4-9f1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pL9-7d-d4a"/>
                             <constraint firstItem="6ob-w4-9f1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="v3d-yr-w3t"/>
                         </constraints>
@@ -37,4 +45,7 @@
             <point key="canvasLocation" x="52.5" y="374.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash" width="1000" height="800"/>
+    </resources>
 </document>
