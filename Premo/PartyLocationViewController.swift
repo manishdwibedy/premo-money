@@ -58,11 +58,18 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
                 let lat = party_dict!["lat"] as! String
                 let long = party_dict!["long"] as! String
                 let type = party_dict!["type"] as! String
+                let capacity = party_dict!["capacity"] as! Int
+                let host = party_dict!["host"] as! String
+                let timestamp = party_dict!["timestamp"] as! String
                 
                 let party = Party(title: "Party \(count)",
                     coordinate: CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!),
                     info: "Description for party \(count) would come here",
-                    type:type)
+                    type:type,
+                    host: host,
+                    capacity: capacity,
+                    timestamp: timestamp
+                )
                 self.annotations.append(party)
             }
             self.map.addAnnotations(self.annotations)
