@@ -292,6 +292,9 @@
                                     <constraint firstAttribute="width" constant="118" id="hS0-7n-2R8"/>
                                 </constraints>
                                 <state key="normal" title="Add Menu Item"/>
+                                <connections>
+                                    <action selector="addMenuItem:" destination="A5A-e5-Meq" eventType="touchUpInside" id="v3h-fu-AFP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

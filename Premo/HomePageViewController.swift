@@ -144,4 +144,18 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     func saveDescription(description: String){
         self.db_ref.child("user_info/\(uid!)/description").setValue(description)
     }
+    @IBAction func addMenuItem(sender: AnyObject) {
+        let category = Int(arc4random_uniform(3))
+        
+        let party: [String:String] = [
+            "name" : "Party No. \(parties.count + 1)",
+            "description" : "Party Description for Party No. \(parties.count + 1)",
+            "image" : "image URL",
+            "type": self.types[category]
+        ]
+        parties.append(party)
+        tableView.reloadData()
+        
+
+    }
 }
