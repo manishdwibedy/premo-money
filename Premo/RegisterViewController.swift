@@ -84,6 +84,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         FIRAuth.auth()?.createUserWithEmail(username, password: saltedPassword) { (user, error) in
             if error == nil{
                 print("User registration successful!")
+                self.login(username, password: saltedPassword)
             }
             else{
                 print("User registration failed")
@@ -100,7 +101,20 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         presentViewController(alertView, animated: true, completion: nil)
     }
     
-        
+    func login(email:String, password: String) {
+        FIRAuth.auth()?.signInWithEmail(email, password: password) { (user, error) in
+            if user != nil{
+                print(user!.displayName)
+                print(user!.email)
+                print(user!.emailVerified)
+                print("User is logged in")
+                self.performSegueWithIdentifier("loginRegisteredUser", sender: nil)
+            }
+            else{
+                print("Login issues \(error))")
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 

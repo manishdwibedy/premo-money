@@ -475,6 +475,7 @@
                         <outlet property="fullName" destination="MzE-c4-2i5" id="78y-hU-TWK"/>
                         <outlet property="password" destination="8wf-3e-OY1" id="jf7-wn-zqh"/>
                         <outlet property="username" destination="sp8-Dl-UCB" id="z5A-V2-1GN"/>
+                        <segue destination="A5A-e5-Meq" kind="showDetail" identifier="loginRegisteredUser" id="8UP-Ht-YEd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0Z-MZ-199" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -816,7 +817,7 @@
         <image name="settings" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hae-aF-Efp"/>
+        <segue reference="8UP-Ht-YEd"/>
         <segue reference="HF5-sH-60w"/>
     </inferredMetricsTieBreakers>
 </document>
