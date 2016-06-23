@@ -234,8 +234,8 @@
                                     <outlet property="delegate" destination="A5A-e5-Meq" id="oAF-pF-tCO"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQA-5C-va2">
-                                <rect key="frame" x="309" y="104" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQA-5C-va2">
+                                <rect key="frame" x="285" y="124" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5yM-RW-kdZ"/>
                                     <constraint firstAttribute="width" constant="46" id="g0X-n3-D9a"/>
@@ -245,8 +245,8 @@
                                     <segue destination="KEX-vL-gdh" kind="showDetail" id="TvT-MS-83o"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEB-YR-ZZu">
-                                <rect key="frame" x="48" y="104" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEB-YR-ZZu">
+                                <rect key="frame" x="44" y="124" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="3DV-F4-eMU"/>
                                     <constraint firstAttribute="height" constant="30" id="Rcs-E0-Bdg"/>
