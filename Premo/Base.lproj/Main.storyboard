@@ -468,7 +468,7 @@
         <!--Menu Item -->
         <scene sceneID="1Dp-Gw-zAF">
             <objects>
-                <viewController title="Menu Item " id="hXc-OM-j3l" sceneMemberID="viewController">
+                <viewController title="Menu Item " id="hXc-OM-j3l" customClass="MenuItemViewController" customModule="Premo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="REd-VX-uOo"/>
                         <viewControllerLayoutGuide type="bottom" id="k5V-Ln-qJp"/>

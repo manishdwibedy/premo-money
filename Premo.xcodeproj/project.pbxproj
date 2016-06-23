@@ -21,6 +21,7 @@
 		5B0A2DFB1D1B47E800661341 /* PartyDescrptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A2DFA1D1B47E800661341 /* PartyDescrptionViewController.swift */; };
 		5B111B3B1D19FC5E0015F434 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B111B3A1D19FC5E0015F434 /* Party.swift */; };
 		5B24B8871D14DC1A0026CF67 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B24B8861D14DC1A0026CF67 /* HomePageViewController.swift */; };
+		5B3FE7491D1CA387008AA0EF /* MenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FE7481D1CA387008AA0EF /* MenuItemViewController.swift */; };
 		5B477E8D1D18CAA4003976BD /* PartyLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B477E8C1D18CAA4003976BD /* PartyLocationViewController.swift */; };
 		5B477E8F1D18CB6E003976BD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B477E8E1D18CB6E003976BD /* MapKit.framework */; };
 		5B477E911D18D02E003976BD /* HostingPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B477E901D18D02E003976BD /* HostingPartyViewController.swift */; };
@@ -49,6 +50,7 @@
 		5B111B391D19F7BB0015F434 /* location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = location.gpx; sourceTree = "<group>"; };
 		5B111B3A1D19FC5E0015F434 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		5B24B8861D14DC1A0026CF67 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		5B3FE7481D1CA387008AA0EF /* MenuItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemViewController.swift; sourceTree = "<group>"; };
 		5B477E8C1D18CAA4003976BD /* PartyLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyLocationViewController.swift; sourceTree = "<group>"; };
 		5B477E8E1D18CB6E003976BD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5B477E901D18D02E003976BD /* HostingPartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostingPartyViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				5B0A2DFA1D1B47E800661341 /* PartyDescrptionViewController.swift */,
 				5B477E901D18D02E003976BD /* HostingPartyViewController.swift */,
 				5B845BDE1D1895CA00C1616B /* SettingsViewController.swift */,
+				5B3FE7481D1CA387008AA0EF /* MenuItemViewController.swift */,
 				5B24B8861D14DC1A0026CF67 /* HomePageViewController.swift */,
 				5B04EC7D1D14811900FE6C72 /* ViewController.swift */,
 				5B477E8C1D18CAA4003976BD /* PartyLocationViewController.swift */,
@@ -274,6 +277,7 @@
 				5B04EC9D1D14940300FE6C72 /* RegisterViewController.swift in Sources */,
 				5B04EC7E1D14811900FE6C72 /* ViewController.swift in Sources */,
 				5B477E911D18D02E003976BD /* HostingPartyViewController.swift in Sources */,
+				5B3FE7491D1CA387008AA0EF /* MenuItemViewController.swift in Sources */,
 				5B24B8871D14DC1A0026CF67 /* HomePageViewController.swift in Sources */,
 				5B0A2DF91D1B235A00661341 /* Constant.swift in Sources */,
 				5B04EC7C1D14811900FE6C72 /* AppDelegate.swift in Sources */,
