@@ -47,13 +47,15 @@ class HostingPartyViewController: UIViewController {
             let long = user_data["long"]!
             
             let party_data = [
+                "host": "\(uid!)",
+                "timestamp": self.partyID,
                 "capacity": Int(self.maxCapacity.text!)!,
                 "donations" : self.donationSlider.value,
                 "lat": String(lat!),
                 "long": String(long!),
                 "type" : party_type
             ]
-            self.db_ref.child("party").child(self.partyID).setValue(party_data)
+            self.db_ref.child("party").child("\(uid)::\(self.partyID)").setValue(party_data)
             
             self.performSegueWithIdentifier("showPartyOnMap", sender: nil)
 

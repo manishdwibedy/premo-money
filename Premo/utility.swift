@@ -100,8 +100,7 @@ class Util{
         let spaceRemoved = timestamp.stringByReplacingOccurrencesOfString(" ", withString: "_")
         let partyID = spaceRemoved.stringByReplacingOccurrencesOfString(",", withString: "")
         
-        let uid = FIRAuth.auth()?.currentUser?.uid
-        return "\(uid!)::\(partyID)"
+        return "\(partyID)"
     }
     
     static func getCoordinates(user_data: [String:String], uid: String, db_ref: FIRDatabaseReference){
