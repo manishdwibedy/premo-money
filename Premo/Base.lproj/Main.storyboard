@@ -294,6 +294,7 @@
                                 <state key="normal" title="Add Menu Item"/>
                                 <connections>
                                     <action selector="addMenuItem:" destination="A5A-e5-Meq" eventType="touchUpInside" id="v3h-fu-AFP"/>
+                                    <segue destination="hXc-OM-j3l" kind="showDetail" id="VVt-N7-Zmd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -463,6 +464,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tl9-vo-mkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1322.5" y="-545.5"/>
+        </scene>
+        <!--Menu Item -->
+        <scene sceneID="1Dp-Gw-zAF">
+            <objects>
+                <viewController title="Menu Item " id="hXc-OM-j3l" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="REd-VX-uOo"/>
+                        <viewControllerLayoutGuide type="bottom" id="k5V-Ln-qJp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BDc-Lj-ERb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgw-jG-xeh">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Ig3-bx-ovQ"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Add Menu Item" id="c6b-eh-eVI">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="aNd-r8-OY9">
+                                            <connections>
+                                                <segue destination="A5A-e5-Meq" kind="showDetail" id="Pmw-Ze-58M"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dgw-jG-xeh" firstAttribute="top" secondItem="REd-VX-uOo" secondAttribute="bottom" id="3gZ-gu-jIj"/>
+                            <constraint firstItem="dgw-jG-xeh" firstAttribute="leading" secondItem="BDc-Lj-ERb" secondAttribute="leadingMargin" constant="-20" id="PV1-aW-QGJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dgw-jG-xeh" secondAttribute="trailing" constant="-20" id="tlE-5C-l6z"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zbh-mN-xib" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1899" y="-652"/>
         </scene>
         <!--Registration-->
         <scene sceneID="s4P-LK-FAS">
@@ -880,7 +922,7 @@
         <image name="settings" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8UP-Ht-YEd"/>
+        <segue reference="Pmw-Ze-58M"/>
         <segue reference="HF5-sH-60w"/>
     </inferredMetricsTieBreakers>
 </document>
