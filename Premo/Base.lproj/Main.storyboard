@@ -713,6 +713,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFE-eC-l4n">
                                 <rect key="frame" x="16" y="94" width="343" height="30"/>
                                 <state key="normal" title="Checkout"/>
+                                <connections>
+                                    <action selector="joinParty:" destination="wKr-eg-CH6" eventType="touchUpInside" id="GIi-bI-rb5"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwW-Zx-rJU">
                                 <rect key="frame" x="16" y="132" width="343" height="515"/>
@@ -818,6 +821,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8UP-Ht-YEd"/>
-        <segue reference="HF5-sH-60w"/>
+        <segue reference="i92-Da-k2g"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -30,5 +30,8 @@ class PartyDescrptionViewController: UIViewController {
         partyDescription.setContentOffset(CGPointZero, animated: false)
     }
     
+    @IBAction func joinParty(sender: UIButton) {
+        print("Joining the party")
+    }
     
 }
