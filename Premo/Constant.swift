@@ -9,6 +9,6 @@
 import Foundation
 
 class Constant{
-    static let party_type = ["Hybrid", "Sativa", "Indigo"]
+    static let party_type = ["Hybrid", "Sativa", "Indica"]
 }
 
