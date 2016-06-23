@@ -218,21 +218,8 @@
                                     <outlet property="delegate" destination="A5A-e5-Meq" id="60I-gX-BNS"/>
                                 </connections>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Party Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jar-6n-Cyz">
-                                <rect key="frame" x="16" y="395" width="110" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Q1K-rW-aof"/>
-                                    <constraint firstAttribute="width" constant="110" id="Wy1-mz-U21"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uhy-dk-CFt">
-                                <rect key="frame" x="136" y="400" width="223" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="jXB-j1-mca"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="427" width="343" height="29"/>
                                 <segments>
                                     <segment title="Indigo"/>
                                     <segment title="Stativa"/>
@@ -243,8 +230,11 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jZs-EX-ADY">
-                                <rect key="frame" x="16" y="445" width="343" height="222"/>
+                                <rect key="frame" x="16" y="475" width="343" height="192"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="222" id="UmE-Cs-NE2"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="LkF-lR-yTj" detailTextLabel="mRu-Ee-OGk" imageView="XNm-VV-84D" style="IBUITableViewCellStyleSubtitle" id="cb4-h0-q5I">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
@@ -275,47 +265,65 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UmE-Cs-NE2"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="A5A-e5-Meq" id="Mgw-9G-AjW"/>
                                     <outlet property="delegate" destination="A5A-e5-Meq" id="oAF-pF-tCO"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Party Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jar-6n-Cyz">
+                                <rect key="frame" x="16" y="377" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bNc-al-w7z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Mgn-Tb-3Gj" firstAttribute="top" secondItem="RXZ-Q3-kZy" secondAttribute="bottom" id="1Q8-ix-QzI"/>
+                            <constraint firstItem="jZs-EX-ADY" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="7uC-s8-vlD"/>
                             <constraint firstItem="eCX-CE-UpO" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" id="DON-JJ-HHg"/>
                             <constraint firstItem="nvV-n4-V4k" firstAttribute="top" secondItem="Mgn-Tb-3Gj" secondAttribute="bottom" constant="25" id="EkH-7N-7If"/>
                             <constraint firstItem="eCX-CE-UpO" firstAttribute="top" secondItem="nvV-n4-V4k" secondAttribute="bottom" constant="40" id="FzL-FT-wK5"/>
                             <constraint firstItem="8aN-yI-qTs" firstAttribute="top" secondItem="eCX-CE-UpO" secondAttribute="bottom" constant="10" id="INY-88-IZj"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="jZs-EX-ADY" secondAttribute="bottom" id="LbY-86-L3p"/>
                             <constraint firstItem="eCX-CE-UpO" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="OCI-YD-je4"/>
-                            <constraint firstItem="uhy-dk-CFt" firstAttribute="top" secondItem="8aN-yI-qTs" secondAttribute="bottom" constant="15" id="OqU-jr-tga"/>
-                            <constraint firstItem="uhy-dk-CFt" firstAttribute="leading" secondItem="jar-6n-Cyz" secondAttribute="trailing" constant="10" id="QQr-II-GxF"/>
                             <constraint firstItem="vQA-5C-va2" firstAttribute="top" secondItem="Mgn-Tb-3Gj" secondAttribute="bottom" constant="60" id="QYa-8j-BG8"/>
-                            <constraint firstItem="jZs-EX-ADY" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="Sj1-DA-AQ4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jar-6n-Cyz" secondAttribute="trailing" id="RQO-5I-Arw"/>
+                            <constraint firstItem="jZs-EX-ADY" firstAttribute="top" secondItem="uhy-dk-CFt" secondAttribute="bottom" constant="20" id="SOp-nW-UmZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jZs-EX-ADY" secondAttribute="trailing" id="TJB-JV-sTh"/>
                             <constraint firstItem="8aN-yI-qTs" firstAttribute="top" secondItem="TmT-2d-uV8" secondAttribute="bottom" constant="10" id="Ua5-LT-sum"/>
-                            <constraint firstItem="uhy-dk-CFt" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" id="Uo9-cQ-Cos"/>
-                            <constraint firstItem="AeI-J8-0gF" firstAttribute="top" secondItem="jZs-EX-ADY" secondAttribute="bottom" id="Wdw-U5-fyN"/>
-                            <constraint firstItem="jar-6n-Cyz" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="Y2G-VD-JbF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jar-6n-Cyz" secondAttribute="trailing" id="VXD-g2-gIq"/>
+                            <constraint firstItem="jar-6n-Cyz" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="ZUH-lb-tgX"/>
+                            <constraint firstItem="jar-6n-Cyz" firstAttribute="top" secondItem="auH-0b-SRe" secondAttribute="bottom" constant="131" id="ZXk-Yr-ztC"/>
                             <constraint firstItem="Mgn-Tb-3Gj" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" constant="-20" id="a7n-8P-vL9"/>
+                            <constraint firstItem="uhy-dk-CFt" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" id="c6X-6c-034"/>
                             <constraint firstItem="NEB-YR-ZZu" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" constant="28" id="csO-cT-Nki"/>
                             <constraint firstItem="TmT-2d-uV8" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="d7G-Vv-6Yu"/>
+                            <constraint firstItem="uhy-dk-CFt" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="ef9-kC-YdR"/>
                             <constraint firstItem="TmT-2d-uV8" firstAttribute="top" secondItem="eCX-CE-UpO" secondAttribute="bottom" constant="10" id="j6v-0u-pha"/>
                             <constraint firstItem="nvV-n4-V4k" firstAttribute="centerX" secondItem="84z-wQ-6oh" secondAttribute="centerX" id="jNl-Id-A9g"/>
-                            <constraint firstItem="jar-6n-Cyz" firstAttribute="top" secondItem="8aN-yI-qTs" secondAttribute="bottom" constant="10" id="kMs-jc-sMh"/>
                             <constraint firstItem="vQA-5C-va2" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" constant="-28" id="kQN-Zy-uvu"/>
                             <constraint firstItem="NEB-YR-ZZu" firstAttribute="top" secondItem="Mgn-Tb-3Gj" secondAttribute="bottom" constant="60" id="mEk-F9-fdI"/>
                             <constraint firstItem="8aN-yI-qTs" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" id="mfO-5J-hqW"/>
                             <constraint firstItem="auH-0b-SRe" firstAttribute="top" secondItem="eCX-CE-UpO" secondAttribute="bottom" constant="4" id="ng8-UT-iOk"/>
                             <constraint firstItem="8aN-yI-qTs" firstAttribute="leading" secondItem="84z-wQ-6oh" secondAttribute="leadingMargin" id="q00-K5-q8g"/>
+                            <constraint firstItem="uhy-dk-CFt" firstAttribute="top" secondItem="jar-6n-Cyz" secondAttribute="bottom" constant="10" id="qFb-5y-D3q"/>
+                            <constraint firstItem="jar-6n-Cyz" firstAttribute="top" secondItem="TmT-2d-uV8" secondAttribute="bottom" constant="130" id="qgY-l0-WaO"/>
                             <constraint firstItem="auH-0b-SRe" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" id="qwE-xT-63Q"/>
-                            <constraint firstItem="jZs-EX-ADY" firstAttribute="trailing" secondItem="84z-wQ-6oh" secondAttribute="trailingMargin" id="v2A-Kc-Vy6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mgn-Tb-3Gj" secondAttribute="trailing" constant="-20" id="vGZ-LA-1us"/>
-                            <constraint firstItem="jZs-EX-ADY" firstAttribute="top" secondItem="jar-6n-Cyz" secondAttribute="bottom" constant="10" id="z9e-Ow-fPL"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="INY-88-IZj"/>
+                                <exclude reference="ZXk-Yr-ztC"/>
                             </mask>
                         </variation>
                     </view>
