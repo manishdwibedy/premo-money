@@ -490,7 +490,7 @@
                                     <navigationItem title="Host a party" id="56t-tq-9w6">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="iMp-br-8PW">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="showDetail" id="9kD-ub-xa4"/>
+                                                <segue destination="A5A-e5-Meq" kind="showDetail" id="hae-aF-Efp"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -619,7 +619,7 @@
                                     <navigationItem title="Look for party" id="HEd-b0-rBt">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="1md-9I-oUL">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="showDetail" id="adm-PH-R1g"/>
+                                                <segue destination="A5A-e5-Meq" kind="showDetail" id="BaX-hg-thi"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -804,8 +804,7 @@
         <image name="settings" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eYb-X6-y9H"/>
-        <segue reference="9kD-ub-xa4"/>
-        <segue reference="HF5-sH-60w"/>
+        <segue reference="hae-aF-Efp"/>
+        <segue reference="eyT-ve-zoZ"/>
     </inferredMetricsTieBreakers>
 </document>
