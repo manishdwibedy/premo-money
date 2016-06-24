@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
+import MGSwipeTableCell
 
 class HomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextViewDelegate {
     var menu_list = [[String:String]]()
@@ -101,9 +102,18 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // Rendering individual cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->   UITableViewCell{
+        var cell = tableView.dequeueReusableCellWithIdentifier("cell") as! MGSwipeTableCell!
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        if cell == nil
+        {
+            cell = MGSwipeTableCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")
+        }
         
+        //configure right buttons
+        cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor())
+            ,MGSwipeButton(title: "More",backgroundColor: UIColor.lightGrayColor())]
+        cell.rightSwipeSettings.transition = MGSwipeTransition.Rotate3D
+
         let row = indexPath.row
         let party = filteredRows[row]
         cell.textLabel?.text = party["name"]

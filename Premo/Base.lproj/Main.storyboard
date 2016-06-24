@@ -246,7 +246,7 @@
                                     <constraint firstAttribute="height" constant="222" id="UmE-Cs-NE2"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="LkF-lR-yTj" detailTextLabel="mRu-Ee-OGk" imageView="XNm-VV-84D" style="IBUITableViewCellStyleSubtitle" id="cb4-h0-q5I">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="LkF-lR-yTj" detailTextLabel="mRu-Ee-OGk" imageView="XNm-VV-84D" style="IBUITableViewCellStyleSubtitle" id="cb4-h0-q5I" customClass="MGSwipeTableCell">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cb4-h0-q5I" id="rS8-fQ-6lc">
