@@ -813,6 +813,7 @@
                                                 <segue destination="A5A-e5-Meq" kind="showDetail" id="BaX-hg-thi"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="List" id="Hwl-Ha-5y1"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
