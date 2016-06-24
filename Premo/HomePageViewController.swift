@@ -47,18 +47,18 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             
             print(user_data)
             
-            let menu_list = user_data["menu"] as! [[String:String]]
-            for menu in menu_list{
-                let menu_data: [String:String] = [
-                    "name" : menu["item"]!,
-                    "description" : menu["desc"]!,
-                    "image" : "image URL",
-                    "type": menu["type"]!
-                ]
-                self.menu_list.append(menu_data)
+            if let menu_list = user_data["menu"] as? [[String:String]]{
+                for menu in menu_list{
+                    let menu_data: [String:String] = [
+                        "name" : menu["item"]!,
+                        "description" : menu["desc"]!,
+                        "image" : "image URL",
+                        "type": menu["type"]!
+                    ]
+                    self.menu_list.append(menu_data)
+                }
             }
-
-
+            
         })
         
         filteredRows = menu_list
