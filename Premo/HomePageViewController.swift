@@ -38,17 +38,41 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         
         // Do any additional setup after loading the view, typically from a nib.
         
-        for index in Array(1...self.partyCount){
-            let type = Int(arc4random_uniform(3))
+        let settingRef = db_ref.child("user_info")
+        
+        let _ = settingRef.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            let data = snapshot.value as! [String : AnyObject]
+            
+            let user_data = data[self.uid!]!
+            
+            print(user_data)
+            
+            let menu_list = user_data["menu"] as! [[String:String]]
+            for menu in menu_list{
+                let party: [String:String] = [
+                    "name" : menu["item"]!,
+                    "description" : menu["desc"]!,
+                    "image" : "image URL",
+                    "type": menu["type"]!
+                ]
+                self.parties.append(party)
+            }
 
-            let party: [String:String] = [
-                "name" : "Party No. \(index)",
-                "description" : "Party Description for Party No. \(index)",
-                "image" : "image URL",
-                "type": self.types[type]
-            ]
-            parties.append(party)
-        }
+
+        })
+        
+        
+//        for index in Array(1...self.partyCount){
+//            let type = Int(arc4random_uniform(3))
+//
+//            let party: [String:String] = [
+//                "name" : "Party No. \(index)",
+//                "description" : "Party Description for Party No. \(index)",
+//                "image" : "image URL",
+//                "type": self.types[type]
+//            ]
+//            parties.append(party)
+//        }
         filteredRows = parties
         
         // By default, get Indigo
