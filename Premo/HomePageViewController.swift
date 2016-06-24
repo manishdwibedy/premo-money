@@ -110,8 +110,16 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
         //configure right buttons
-        cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor())
-            ,MGSwipeButton(title: "More",backgroundColor: UIColor.lightGrayColor())]
+        cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: {
+            (sender: MGSwipeTableCell!) -> Bool in
+            print("Deleted!")
+            return true
+        })
+            ,MGSwipeButton(title: "More",backgroundColor: UIColor.lightGrayColor(), callback: {
+                (sender: MGSwipeTableCell!) -> Bool in
+                print("More!")
+                return true
+            })]
         cell.rightSwipeSettings.transition = MGSwipeTransition.Rotate3D
 
         let row = indexPath.row
