@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class HomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextViewDelegate {
-    var parties = [[String:String]]()
+    var menu_list = [[String:String]]()
     var filteredRows = [[String:String]]()
     let partyCount = 10
     let types = ["I", "H", "S"]
@@ -49,31 +49,19 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             
             let menu_list = user_data["menu"] as! [[String:String]]
             for menu in menu_list{
-                let party: [String:String] = [
+                let menu_data: [String:String] = [
                     "name" : menu["item"]!,
                     "description" : menu["desc"]!,
                     "image" : "image URL",
                     "type": menu["type"]!
                 ]
-                self.parties.append(party)
+                self.menu_list.append(menu_data)
             }
 
 
         })
         
-        
-//        for index in Array(1...self.partyCount){
-//            let type = Int(arc4random_uniform(3))
-//
-//            let party: [String:String] = [
-//                "name" : "Party No. \(index)",
-//                "description" : "Party Description for Party No. \(index)",
-//                "image" : "image URL",
-//                "type": self.types[type]
-//            ]
-//            parties.append(party)
-//        }
-        filteredRows = parties
+        filteredRows = menu_list
         
         // By default, get Indigo
         getFilteredContent("I")
@@ -88,10 +76,12 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             let user_data = data[self.uid!]!
             
             if let user_description = user_data["description"]! as? String{
-                        self.userDescription.text = user_description
+                self.userDescription.text = user_description
             }
             
         })
+        
+        tableView.tableFooterView = UIView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -131,7 +121,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     func getFilteredContent(type: String){
         var rows = [[String:String]]()
         
-        for row in self.parties{
+        for row in self.menu_list{
             if row["type"] == type{
                 rows.append(row)
             }
@@ -174,12 +164,12 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         let category = Int(arc4random_uniform(3))
         
         let party: [String:String] = [
-            "name" : "Party No. \(parties.count + 1)",
-            "description" : "Party Description for Party No. \(parties.count + 1)",
+            "name" : "Party No. \(menu_list.count + 1)",
+            "description" : "Party Description for Party No. \(menu_list.count + 1)",
             "image" : "image URL",
             "type": self.types[category]
         ]
-        parties.append(party)
+        menu_list.append(party)
         tableView.reloadData()
         
 
