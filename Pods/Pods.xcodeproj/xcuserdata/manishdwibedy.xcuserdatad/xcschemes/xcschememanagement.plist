@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MGSwipeTableCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Premo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3111FC88DFA156055B8C7B0CA1E60772</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>34C073D448A23CA3A97EA55CC489BD6F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4E1263BFF45F6446CF3DE29AE234C893</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>608B49B5DDACC601EE8044A1931993F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>71A74436AEA54B344497689395175D84</key>
 		<dict>
 			<key>primary</key>
 			<true/>

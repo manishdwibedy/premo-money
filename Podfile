@@ -11,4 +11,5 @@ target 'Premo' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Cosmos'
+  pod 'MGSwipeTableCell'
 end
