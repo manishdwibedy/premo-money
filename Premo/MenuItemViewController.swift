@@ -32,13 +32,32 @@ class MenuItemViewController: UIViewController {
         let index = type.startIndex.advancedBy(1)
         
         let uid = FIRAuth.auth()?.currentUser?.uid
-        var menu_list = [[String:String]]()
-        let menu = [
-            "item": self.menu_item.text!,
-            "desc" : self.menu_desc.text!,
-            "type" : type.substringToIndex(index)
-        ]
-        menu_list.append(menu)
-        self.db_ref.child("user_info/\(uid!)/menu").setValue(menu_list)
+        
+        let _ = self.db_ref.child("user_info/\(uid!)/menu").observeSingleEventOfType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            let menu_object = snapshot.value
+            var menu_array = [[String: AnyObject]]()
+            
+            if let dd = menu_object as? [[String: AnyObject]]{
+                    menu_array = dd
+            }
+//            if let menu_try = menu_object as! [[String : AnyObject]]{
+//                menu_array = menu_try
+//            }
+            let menu = [
+                "item": self.menu_item.text!,
+                "desc" : self.menu_desc.text!,
+                "type" : type.substringToIndex(index)
+            ]
+            menu_array.append(menu)
+            
+            self.db_ref.child("user_info/\(uid!)/menu").setValue(menu_array)
+
+//            
+//            print(user_data)
+//            self.dob.text = user_data["dob"]!! as? String
+//            self.address.text = user_data["address"]!! as? String
+//            self.username.text = user_data["username"]!! as? String
+        })
+        
     }
 }

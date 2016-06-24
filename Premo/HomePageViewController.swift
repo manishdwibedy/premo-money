@@ -209,7 +209,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             if menu["name"] == menuName{
                 self.menu_list.removeAtIndex(index)
                 deleteCount += 1
-                self.db_ref.child("user_info/\(uid!)/menu/\(index)").removeValue()
+                self.db_ref.child("user_info/\(uid!)/menu/\(index - 1)").removeValue()
             }
             index += 1
         }
