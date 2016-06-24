@@ -230,4 +230,7 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
             }
         }
     }
+    @IBAction func showListView(sender: UIBarButtonItem) {
+        print("show list view")
+    }
 }
