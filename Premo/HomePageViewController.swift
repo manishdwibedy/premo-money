@@ -113,6 +113,8 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: {
             (sender: MGSwipeTableCell!) -> Bool in
             print("Deleted!")
+            let menu = self.filteredRows[indexPath.row]
+            self.deleteMenu(menu["name"]!)
             return true
         })
             ,MGSwipeButton(title: "More",backgroundColor: UIColor.lightGrayColor(), callback: {
@@ -189,7 +191,33 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         ]
         menu_list.append(party)
         tableView.reloadData()
+    }
+    
+    func deleteMenu(menuName: String) -> Bool {
+        var deleteCount = 0
+        var index = 0
+        for menu in self.filteredRows{
+            if menu["name"] == menuName{
+                self.filteredRows.removeAtIndex(index)
+                deleteCount += 1
+            }
+            index += 1
+        }
         
-
+        index = 0
+        for menu in self.menu_list{
+            if menu["name"] == menuName{
+                self.menu_list.removeAtIndex(index)
+                deleteCount += 1
+            }
+            index += 1
+        }
+        if deleteCount == 2{
+            tableView.reloadData()
+            return true
+        }
+        else{
+            return false
+        }
     }
 }
