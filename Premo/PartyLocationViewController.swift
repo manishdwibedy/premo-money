@@ -232,5 +232,9 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
     }
     @IBAction func showListView(sender: UIBarButtonItem) {
         print("show list view")
+        
+        UIView.animateWithDuration(0.5, animations: {
+            self.map.alpha -= 1
+        })
     }
 }
