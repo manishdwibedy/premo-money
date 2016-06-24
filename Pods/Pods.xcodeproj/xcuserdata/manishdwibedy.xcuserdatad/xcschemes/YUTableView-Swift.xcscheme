@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C2568E4B0A331D1A2CA1BB737E40AB81"
-               BuildableName = "Pods_Premo.framework"
-               BlueprintName = "Pods-Premo"
+               BlueprintIdentifier = "A3EC30FFE6DD9A6A7604CADF7ED2EFA0"
+               BuildableName = "YUTableView_Swift.framework"
+               BlueprintName = "YUTableView-Swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C2568E4B0A331D1A2CA1BB737E40AB81"
-            BuildableName = "Pods_Premo.framework"
-            BlueprintName = "Pods-Premo"
+            BlueprintIdentifier = "A3EC30FFE6DD9A6A7604CADF7ED2EFA0"
+            BuildableName = "YUTableView_Swift.framework"
+            BlueprintName = "YUTableView-Swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
