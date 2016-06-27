@@ -12,7 +12,7 @@ import CoreLocation
 import FirebaseDatabase
 import FirebaseAuth
 
-class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
+class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource  {
     @IBOutlet weak var map: MKMapView!
     var locationManager: CLLocationManager!
     var annotations = [MKAnnotation]()
@@ -73,6 +73,7 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
                 self.annotations.append(party)
             }
             self.map.addAnnotations(self.annotations)
+            self.party_list.reloadData()
             
             self.showParty("H")
             count += 1
@@ -98,6 +99,9 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
 //        }
         
         map.delegate = self
+        
+        party_list.delegate = self
+        party_list.dataSource = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -230,11 +234,51 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
             }
         }
     }
+    
+    
+    @IBOutlet weak var changeDisplay: UIBarButtonItem!
+    @IBOutlet weak var party_list: UITableView!
+    var currentDisplayStyle = "map"
     @IBAction func showListView(sender: UIBarButtonItem) {
         print("show list view")
         
-        UIView.animateWithDuration(0.5, animations: {
-            self.map.alpha -= 1
-        })
+        if currentDisplayStyle == "map"{
+            UIView.animateWithDuration(0.5, animations: {
+                self.map.alpha = 0
+                self.party_list.alpha = 1
+            })
+            changeDisplay.title = "Map"
+            self.currentDisplayStyle = "list"
+        }
+        else{
+            UIView.animateWithDuration(0.5, animations: {
+                self.map.alpha = 1
+                self.party_list.alpha = 0
+            })
+            changeDisplay.title = "List"
+            self.currentDisplayStyle = "map"
+        }
+        
     }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return annotations.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+
+        let row = indexPath.row
+        let party = self.annotations[row] as! Party
+        
+//        //let ID = party["host"] + "-" + party["lat"] + " " + party["long"]
+        cell.textLabel?.text = "\(party.title!) (\(party.type))"
+        
+        return cell
+    }
+    
 }
