@@ -279,4 +279,12 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         return cell
     }
     
+    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath?{
+        self.selectedParty = self.annotations[indexPath.row] as? Party
+        isPartySelected = true
+        
+        self.performSegueWithIdentifier("showPartyDescription", sender: nil)
+        return indexPath
+    }
+    
 }
