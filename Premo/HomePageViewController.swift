@@ -15,7 +15,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     var menu_list = [[String:String]]()
     var filteredRows = [[String:String]]()
     let partyCount = 10
-    let types = ["I", "H", "S"]
+    let types = ["H", "S", "I"]
     let db_ref = FIRDatabase.database().reference()
     let uid = FIRAuth.auth()?.currentUser?.uid
     @IBOutlet weak var userIcon: UIImageView!
