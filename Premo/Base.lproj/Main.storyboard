@@ -688,6 +688,20 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your party title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jsm-8Z-7TC">
+                                <rect key="frame" x="16" y="84" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Party Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="84p-jS-glV">
+                                <rect key="frame" x="16" y="124" width="343" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XXG-Fy-Yz7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum number of people in the party" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTS-UK-PBk">
                                 <rect key="frame" x="16" y="184" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -749,20 +763,6 @@
                                     <segment title="Indigo"/>
                                 </segments>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your party title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jsm-8Z-7TC">
-                                <rect key="frame" x="16" y="84" width="343" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Party Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="84p-jS-glV">
-                                <rect key="frame" x="16" y="124" width="343" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="XXG-Fy-Yz7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -808,6 +808,8 @@
                         <outlet property="currentDonationAmount" destination="KZb-Lt-osM" id="NFI-Op-4Za"/>
                         <outlet property="donationSlider" destination="tc5-eX-zLM" id="Iy3-38-5ok"/>
                         <outlet property="maxCapacity" destination="Mza-eC-rbS" id="dVT-6J-hPf"/>
+                        <outlet property="partyDescription" destination="84p-jS-glV" id="Cbc-Wv-VXW"/>
+                        <outlet property="partyTitle" destination="Jsm-8Z-7TC" id="NLG-r4-7DS"/>
                         <outlet property="partyType" destination="lQ5-tp-Uvz" id="Qgj-Oe-iBk"/>
                         <segue destination="OKZ-sJ-Ecf" kind="showDetail" identifier="showPartyOnMap" id="eyT-ve-zoZ"/>
                     </connections>

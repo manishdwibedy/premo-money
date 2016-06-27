@@ -19,7 +19,9 @@ class HostingPartyViewController: UIViewController {
     @IBOutlet weak var currentDonationAmount: UILabel!
     @IBOutlet weak var donationSlider: UISlider!
     @IBOutlet weak var partyType: UISegmentedControl!
+    @IBOutlet weak var partyTitle: UITextField!
     
+    @IBOutlet weak var partyDescription: UITextView!
     @IBAction func valueChanged(sender: UIStepper) {
         maxCapacity.text = Int(sender.value).description
     }
@@ -34,7 +36,8 @@ class HostingPartyViewController: UIViewController {
         let uid = FIRAuth.auth()?.currentUser?.uid
         let userInfoRef = db_ref.child("user_info")
         var party_type = Constant.party_type[self.partyType.selectedSegmentIndex]
-        
+        let party_title = partyTitle.text
+        let party_description = partyDescription.text
         let index = party_type.startIndex.advancedBy(0)
         party_type = String(party_type[index])
         
@@ -47,6 +50,8 @@ class HostingPartyViewController: UIViewController {
             let long = user_data["long"]!
             
             let party_data = [
+                "title" : party_title!,
+                "desc" : party_description!,
                 "host": "\(uid!)",
                 "timestamp": self.partyID,
                 "capacity": Int(self.maxCapacity.text!)!,
