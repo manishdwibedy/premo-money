@@ -155,6 +155,10 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
                 // 5
                 let btn = UIButton(type: .DetailDisclosure)
                 annotationView!.rightCalloutAccessoryView = btn
+                
+                let hostIcon = UIImageView(frame: CGRectMake(0, 0, 45, 45))
+                hostIcon.image=UIImage(named: "dummy-user.jpg")
+                annotationView?.leftCalloutAccessoryView = hostIcon
             } else {
                 // 6
                 annotationView!.annotation = annotation
