@@ -62,10 +62,12 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
                 let capacity = party_dict!["capacity"] as! Int
                 let host = party_dict!["host"] as! String
                 let timestamp = party_dict!["timestamp"] as! String
+                let title = party_dict!["title"] as! String
+                let desc = party_dict!["desc"] as! String
                 
-                let party = Party(title: "Party \(count)",
+                let party = Party(title: title,
                     coordinate: CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!),
-                    info: "Description for party \(count) would come here",
+                    info: desc,
                     type: type,
                     host: host,
                     capacity: capacity,
