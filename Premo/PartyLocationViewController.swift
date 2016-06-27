@@ -18,6 +18,7 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
     var annotations = [MKAnnotation]()
     var selectedParty: Party?
     var isPartySelected = false
+    var userInfo = [String: NSDictionary]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +66,7 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
                 let party = Party(title: "Party \(count)",
                     coordinate: CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!),
                     info: "Description for party \(count) would come here",
-                    type:type,
+                    type: type,
                     host: host,
                     capacity: capacity,
                     timestamp: timestamp
@@ -80,6 +81,20 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
             
         })
         
+        let userRef = db_ref.child("user_info")
+        let _ = userRef.observeSingleEventOfType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            let user_data = snapshot.value as! [String : AnyObject]
+            print(user_data)
+            
+            var user_info = [String: NSDictionary]()
+            for (userID, user) in user_data{
+                let user_dict = user as? NSDictionary
+                
+                user_info[userID] = user_dict
+            }
+            self.userInfo = user_info
+        })
+
         map.delegate = self
         
         party_list.delegate = self
@@ -258,8 +273,9 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         let party = self.annotations[row] as! Party
         
 //        //let ID = party["host"] + "-" + party["lat"] + " " + party["long"]
-        cell.textLabel?.text = "\(party.title!) (\(party.type))"
-        
+        cell.textLabel?.text = "\(party.title!)"
+        let hostInfo = self.userInfo[party.host]
+        cell.detailTextLabel?.text = "\(hostInfo!["address"]!)"
         return cell
     }
     
