@@ -18,6 +18,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     let types = ["I", "H", "S"]
     let db_ref = FIRDatabase.database().reference()
     let uid = FIRAuth.auth()?.currentUser?.uid
+    @IBOutlet weak var userIcon: UIImageView!
     
     @IBAction func typeChanged(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex
@@ -81,6 +82,12 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             }
             
         })
+        
+        userIcon.layer.borderWidth = 1
+        userIcon.layer.masksToBounds = false
+        userIcon.layer.borderColor = UIColor.blackColor().CGColor
+        userIcon.layer.cornerRadius = userIcon.frame.height/2
+        userIcon.clipsToBounds = true
         
         tableView.tableFooterView = UIView()
     }
