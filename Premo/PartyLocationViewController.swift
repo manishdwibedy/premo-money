@@ -146,6 +146,8 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
             // 3
             var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
             
+            let party = annotation as! Party
+            
             if annotationView == nil {
                 //4
                 annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
@@ -159,6 +161,15 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
                 let hostIcon = UIImageView(frame: CGRectMake(0, 0, 45, 45))
                 hostIcon.image=UIImage(named: "dummy-user.jpg")
                 annotationView?.leftCalloutAccessoryView = hostIcon
+                
+                //THIS IS THE GOOD BIT
+                let subtitleView = UILabel()
+                subtitleView.font = subtitleView.font.fontWithSize(12)
+                subtitleView.numberOfLines = 0
+                subtitleView.text = party.info
+                annotationView!.detailCalloutAccessoryView = subtitleView
+                
+                
             } else {
                 // 6
                 annotationView!.annotation = annotation
