@@ -221,9 +221,9 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uhy-dk-CFt">
                                 <rect key="frame" x="16" y="467" width="343" height="29"/>
                                 <segments>
-                                    <segment title="Indigo"/>
-                                    <segment title="Stativa"/>
                                     <segment title="Hybrid"/>
+                                    <segment title="Stativa"/>
+                                    <segment title="Indigo"/>
                                 </segments>
                                 <connections>
                                     <action selector="typeChanged:" destination="A5A-e5-Meq" eventType="valueChanged" id="qUg-pG-yUl"/>

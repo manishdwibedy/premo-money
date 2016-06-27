@@ -24,11 +24,11 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         switch sender.selectedSegmentIndex
         {
             case 0:
-                self.getFilteredContent("I")
+                self.getFilteredContent("H")
             case 1:
                 self.getFilteredContent("S")
             case 2:
-                self.getFilteredContent("H")
+                self.getFilteredContent("I")
             default:
                 break
         }
@@ -66,7 +66,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         filteredRows = menu_list
         
         // By default, get Indigo
-        getFilteredContent("I")
+        getFilteredContent("H")
         
         userDescription.delegate = self
         
