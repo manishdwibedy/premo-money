@@ -15,7 +15,8 @@ import FirebaseAuth
 class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource  {
     @IBOutlet weak var map: MKMapView!
     var locationManager: CLLocationManager!
-    var annotations = [MKAnnotation]()
+    var parties = [MKAnnotation]()
+    var filteredParties = [MKAnnotation]()
     var selectedParty: Party?
     var isPartySelected = false
     var userInfo = [String: NSDictionary]()
@@ -73,9 +74,10 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
                     capacity: capacity,
                     timestamp: timestamp
                 )
-                self.annotations.append(party)
+                self.parties.append(party)
             }
-            self.map.addAnnotations(self.annotations)
+            self.filteredParties = self.parties
+            self.map.addAnnotations(self.parties)
             self.party_list.reloadData()
             
             self.showParty("H")
@@ -219,22 +221,40 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
     }
     
     func showParty(type: String){
-        self.map.removeAnnotations(self.annotations)
-        var filteredAnnotations = [MKAnnotation]()
         
-        if type == "H"{
-            filteredAnnotations = self.annotations
-        }
-        else{
-            for annotation in self.annotations{
-                let annotation = annotation as! Party
-                if annotation.type == type{
-                    filteredAnnotations.append(annotation)
+        if currentDisplayStyle == "map"{
+            self.map.removeAnnotations(self.parties)
+            var filteredAnnotations = [MKAnnotation]()
+            
+            if type == "H"{
+                filteredAnnotations = self.parties
+            }
+            else{
+                for annotation in self.parties{
+                    let annotation = annotation as! Party
+                    if annotation.type == type{
+                        filteredAnnotations.append(annotation)
+                    }
                 }
             }
+            map.addAnnotations(filteredAnnotations)
         }
-        map.addAnnotations(filteredAnnotations)
-
+        else{
+            self.filteredParties = [MKAnnotation]()
+            if type == "H"{
+                self.filteredParties = self.parties
+            }
+            else{
+                for annotation in self.parties{
+                    let annotation = annotation as! Party
+                    if annotation.type == type{
+                        self.filteredParties.append(annotation)
+                    }
+                }
+            }
+            party_list.reloadData()
+        }
+        
     }
     
     func showPartyDescription(){
@@ -284,16 +304,15 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return annotations.count
+        return self.filteredParties.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
 
         let row = indexPath.row
-        let party = self.annotations[row] as! Party
+        let party = self.filteredParties[row] as! Party
         
-//        //let ID = party["host"] + "-" + party["lat"] + " " + party["long"]
         cell.textLabel?.text = "\(party.title!)"
         let hostInfo = self.userInfo[party.host]
         cell.detailTextLabel?.text = "\(hostInfo!["address"]!)"
@@ -301,7 +320,7 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
     }
     
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath?{
-        self.selectedParty = self.annotations[indexPath.row] as? Party
+        self.selectedParty = self.parties[indexPath.row] as? Party
         isPartySelected = true
         
         self.performSegueWithIdentifier("showPartyDescription", sender: nil)
