@@ -59,14 +59,15 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
                     ]
                     self.menu_list.append(menu_data)
                 }
+                // By default, get Hybrid
+                self.getFilteredContent("H")
+                
             }
             
         })
         
         filteredRows = menu_list
         
-        // By default, get Indigo
-        getFilteredContent("H")
         
         userDescription.delegate = self
         
