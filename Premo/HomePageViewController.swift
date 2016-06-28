@@ -148,14 +148,18 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     func getFilteredContent(type: String){
         var rows = [[String:String]]()
         
-        for row in self.menu_list{
-            if row["type"] == type{
-                rows.append(row)
-            }
+        if type == "H"{
+            self.filteredRows = self.menu_list
         }
-        self.filteredRows = rows
+        else{
+            for row in self.menu_list{
+                if row["type"] == type{
+                    rows.append(row)
+                }
+            }
+            self.filteredRows = rows
+        }
         tableView.reloadData()
-        
     }
     
     var isEditingDescription = false

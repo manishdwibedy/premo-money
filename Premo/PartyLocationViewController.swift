@@ -222,12 +222,16 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         self.map.removeAnnotations(self.annotations)
         var filteredAnnotations = [MKAnnotation]()
         
-        for annotation in self.annotations{
-            let annotation = annotation as! Party
-            if annotation.type == type{
-                filteredAnnotations.append(annotation)
+        if type == "H"{
+            filteredAnnotations = self.annotations
+        }
+        else{
+            for annotation in self.annotations{
+                let annotation = annotation as! Party
+                if annotation.type == type{
+                    filteredAnnotations.append(annotation)
+                }
             }
-            
         }
         map.addAnnotations(filteredAnnotations)
 
