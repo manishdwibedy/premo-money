@@ -158,6 +158,7 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
                 
                 // 5
                 let btn = UIButton(type: .DetailDisclosure)
+                btn.tintColor = UIColor.purpleColor()
                 annotationView!.rightCalloutAccessoryView = btn
                 
                 let hostIcon = UIImageView(frame: CGRectMake(0, 0, 45, 45))
