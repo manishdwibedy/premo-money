@@ -58,6 +58,11 @@
 	<string>184729371930165</string>
 	<key>FacebookDisplayName</key>
 	<string>Sticky Green</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Roboto-Black.tff</string>
+		<string>Roboto-Thin.tff</string>
+	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
