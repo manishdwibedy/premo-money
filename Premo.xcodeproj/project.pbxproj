@@ -27,6 +27,8 @@
 		5B477E911D18D02E003976BD /* HostingPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B477E901D18D02E003976BD /* HostingPartyViewController.swift */; };
 		5B845BDB1D186CAA00C1616B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B845BDA1D186CAA00C1616B /* GoogleService-Info.plist */; };
 		5B845BDF1D1895CA00C1616B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B845BDE1D1895CA00C1616B /* SettingsViewController.swift */; };
+		5BE2BD3D1D233341007FAEF3 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2BD3B1D233341007FAEF3 /* Roboto-Black.ttf */; };
+		5BE2BD3E1D233341007FAEF3 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2BD3C1D233341007FAEF3 /* Roboto-Thin.ttf */; };
 		BDD977FB07C3ECDD2A38393E /* Pods_Premo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6848F403B6249BF17C4BCF /* Pods_Premo.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		5B477E901D18D02E003976BD /* HostingPartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostingPartyViewController.swift; sourceTree = "<group>"; };
 		5B845BDA1D186CAA00C1616B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B845BDE1D1895CA00C1616B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5BE2BD3B1D233341007FAEF3 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		5BE2BD3C1D233341007FAEF3 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		DA6848F403B6249BF17C4BCF /* Pods_Premo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Premo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,6 +100,7 @@
 		5B04EC7A1D14811900FE6C72 /* Premo */ = {
 			isa = PBXGroup;
 			children = (
+				5BE2BD3F1D23334A007FAEF3 /* Fonts */,
 				5B04EC7B1D14811900FE6C72 /* AppDelegate.swift */,
 				5B04EC7F1D14811900FE6C72 /* Main.storyboard */,
 				5B0A2DFA1D1B47E800661341 /* PartyDescrptionViewController.swift */,
@@ -127,6 +132,15 @@
 				5B04EC971D14833700FE6C72 /* FBSDKShareKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BE2BD3F1D23334A007FAEF3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5BE2BD3B1D233341007FAEF3 /* Roboto-Black.ttf */,
+				5BE2BD3C1D233341007FAEF3 /* Roboto-Thin.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		6379616E050803A71DD5BDE0 /* Pods */ = {
@@ -211,6 +225,8 @@
 			files = (
 				5B04EC861D14811900FE6C72 /* LaunchScreen.storyboard in Resources */,
 				5B845BDB1D186CAA00C1616B /* GoogleService-Info.plist in Resources */,
+				5BE2BD3E1D233341007FAEF3 /* Roboto-Thin.ttf in Resources */,
+				5BE2BD3D1D233341007FAEF3 /* Roboto-Black.ttf in Resources */,
 				5B04EC831D14811900FE6C72 /* Assets.xcassets in Resources */,
 				5B04EC811D14811900FE6C72 /* Main.storyboard in Resources */,
 			);
