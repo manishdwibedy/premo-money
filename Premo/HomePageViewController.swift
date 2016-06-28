@@ -180,6 +180,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             print("editing..")
             userDescription.editable = true
             userDescription.selectable = true
+            userDescription.selectAll(nil)
             self.changeButtonText("Save")
         }
         isEditingDescription = !isEditingDescription

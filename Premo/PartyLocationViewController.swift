@@ -164,7 +164,6 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
                 hostIcon.image=UIImage(named: "dummy-user.jpg")
                 annotationView?.leftCalloutAccessoryView = hostIcon
                 
-                //THIS IS THE GOOD BIT
                 let subtitleView = UILabel()
                 subtitleView.font = subtitleView.font.fontWithSize(12)
                 subtitleView.numberOfLines = 0
