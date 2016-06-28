@@ -10,7 +10,7 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class HostingPartyViewController: UIViewController {
+class HostingPartyViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
     let partyID = Util.getPartyIdentifier()
     let db_ref = FIRDatabase.database().reference()
     
@@ -75,10 +75,26 @@ class HostingPartyViewController: UIViewController {
         
         donationSlider.continuous = false
         currentDonationAmount.text = "Donating $\(donationSlider.value)"
+        
+        partyDescription.delegate = self
+        partyTitle.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        return true
     }
 }
