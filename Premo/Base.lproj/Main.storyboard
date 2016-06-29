@@ -293,7 +293,6 @@
                                 </constraints>
                                 <state key="normal" title="Add Menu Item"/>
                                 <connections>
-                                    <action selector="addMenuItem:" destination="A5A-e5-Meq" eventType="touchUpInside" id="v3h-fu-AFP"/>
                                     <segue destination="hXc-OM-j3l" kind="showDetail" id="VVt-N7-Zmd"/>
                                 </connections>
                             </button>
