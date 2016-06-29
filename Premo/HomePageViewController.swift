@@ -242,24 +242,6 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     /*!
-     * @discussion Adding a new menu
-     * @param <#param description#>
-     * @return <#return description#>
-     */
-    @IBAction func addMenuItem(sender: AnyObject) {
-        let category = Int(arc4random_uniform(3))
-        
-        let party: [String:String] = [
-            "name" : "Party No. \(menu_list.count + 1)",
-            "description" : "Party Description for Party No. \(menu_list.count + 1)",
-            "image" : "image URL",
-            "type": self.types[category]
-        ]
-        menu_list.append(party)
-        tableView.reloadData()
-    }
-    
-    /*!
      * @discussion Deleting the menu item and also reloading the menu list
      * @param the menu's name to be deleted
      * @return true, if the deletion was successful, otherwise false
