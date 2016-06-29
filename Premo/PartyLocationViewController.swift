@@ -384,9 +384,10 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
     }
     
     /*!
-     * @discussion Rendering t
-     * @param <#param description#>
-     * @return <#return description#>
+     * @discussion Rendering the table cells
+     * @param tableView: UITableView
+     * @param cellForRowAtIndexPath indexPath: NSIndexPath
+     * @return table cell
      */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
@@ -400,9 +401,10 @@ class PartyLocationViewController: UIViewController, CLLocationManagerDelegate, 
         return cell
     }
     /*!
-     * @discussion <#description#>
-     * @param <#param description#>
-     * @return <#return description#>
+     * @discussion Handling the selection of a cell
+     * @param tableView: UITableView
+     * @param willSelectRowAtIndexPath indexPath: NSIndexPath
+     * @return indexPath
      */
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath?{
         self.selectedParty = self.parties[indexPath.row] as? Party
