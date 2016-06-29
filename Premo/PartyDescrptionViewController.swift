@@ -10,29 +10,45 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
+// This ViewController would handle the party description screen
 class PartyDescrptionViewController: UIViewController {
     var party: Party?
+    
+    // The DB reference
     let db_ref = FIRDatabase.database().reference()
+    
+    // The UID representing the current logged in user
+    let uid = FIRAuth.auth()?.currentUser!.uid
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var partyDescription: UITextView!
-//    @IBOutlet weak var partyDescription: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Do any additional setup after loading the view, typically from a nib.
         navigationBar.topItem?.title = party?.title
         partyDescription.text = party?.info
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    /*!
+     * @discussion This method would scroll the user description text view to the very top
+     */
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         partyDescription.setContentOffset(CGPointZero, animated: false)
     }
     
+    /*!
+     * @discussion Joining the party
+     * @param sender - UIButton
+     */
     @IBAction func joinParty(sender: UIButton) {
         print("Joining the party")
         
@@ -40,9 +56,10 @@ class PartyDescrptionViewController: UIViewController {
         let timestamp = party?.timestamp
         let party_ID = "\(host!)::\(timestamp!)"
         
-        let uid = FIRAuth.auth()?.currentUser!.uid
+        // Adding the current user to the party's guest list
         party!.addGuest(uid!)
 
+        // Joining the party
         self.db_ref.child("party/\(party_ID)/guests").setValue(party?.guests)
 
     }
