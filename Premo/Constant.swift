@@ -8,7 +8,9 @@
 
 import Foundation
 
+// Represents the constants in the project
 class Constant{
+    // The party types
     static let party_type = ["Hybrid", "Sativa", "Indica"]
 }
 
