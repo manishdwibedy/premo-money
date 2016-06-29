@@ -72,13 +72,10 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func saveSettings(sender: UIBarButtonItem) {
-        let user_data = [
-            "username": username.text!,
-            "dob" : dob.text!,
-            "address": address.text!
-        ]
-        //db_ref.child("user_info").child(uid!).setValue(user_data)
-        Util.getCoordinates(user_data, uid: uid!, db_ref: db_ref)
+        self.db_ref.child("user_info/\(uid!)/username").setValue(username.text!)
+        self.db_ref.child("user_info/\(uid!)/dob").setValue(dob.text!)
+        self.db_ref.child("user_info/\(uid!)/address").setValue(address.text!)
+        
         
     }
 }
