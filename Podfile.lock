@@ -1,4 +1,26 @@
 PODS:
+  - Braintree (4.3.0):
+    - Braintree/Card (= 4.3.0)
+    - Braintree/Core (= 4.3.0)
+    - Braintree/PayPal (= 4.3.0)
+    - Braintree/UI (= 4.3.0)
+  - Braintree/Card (4.3.0):
+    - Braintree/Core
+  - Braintree/Core (4.3.0)
+  - Braintree/PayPal (4.3.0):
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPalDataCollector (4.3.0):
+    - Braintree/Core
+    - Braintree/PayPalUtils
+  - Braintree/PayPalOneTouch (4.3.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+    - Braintree/PayPalUtils
+  - Braintree/PayPalUtils (4.3.0)
+  - Braintree/UI (4.3.0):
+    - Braintree/Card
+    - Braintree/Core
   - Cosmos (1.2.2)
   - CryptoSwift (0.4.1)
   - Firebase (3.2.0):
@@ -35,6 +57,7 @@ PODS:
   - MGSwipeTableCell (1.5.5)
 
 DEPENDENCIES:
+  - Braintree
   - Cosmos
   - CryptoSwift
   - Firebase
@@ -43,6 +66,7 @@ DEPENDENCIES:
   - MGSwipeTableCell
 
 SPEC CHECKSUMS:
+  Braintree: 7ecbec91c6deb0080ffc2946aba568db5b31c859
   Cosmos: 87c49100c69d2cb2eebfa4eb8d1e801fe29ff774
   CryptoSwift: 25b5aff3f260967391f8fff2e9abe4254d2c6fd5
   Firebase: 6d4012da1598732a2b43f16d8355eca90f94ed59
@@ -56,6 +80,6 @@ SPEC CHECKSUMS:
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
   MGSwipeTableCell: bafeb5f351124544c9364ecbdf24c7b06a37d340
 
-PODFILE CHECKSUM: e8975ad1afab90c5ca483eadbebaab09cd3e85fa
+PODFILE CHECKSUM: b699e923dcd5a9f3c477c6fd9d6e65c92e557c3c
 
 COCOAPODS: 1.0.0
