@@ -48,10 +48,12 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             let user_data = data[self.uid!]!
             
             print(user_data)
-            let user_description = user_data["description"] as! String
-            self.userDescription.text = user_description
+            if let userDescription = user_data["description"] as? String{
+                self.userDescription.text = userDescription
+            }
             
             if let menu_list = user_data["menu"] as? [[String:String]]{
+                self.menu_list = [[String:String]]()
                 for menu in menu_list{
                     let menu_data: [String:String] = [
                         "name" : menu["item"]!,
