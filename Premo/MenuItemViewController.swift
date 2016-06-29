@@ -44,8 +44,8 @@ class MenuItemViewController: UIViewController {
 //                menu_array = menu_try
 //            }
             let menu = [
-                "item": self.menu_item.text!,
-                "desc" : self.menu_desc.text!,
+                "name": self.menu_item.text!,
+                "description" : self.menu_desc.text!,
                 "type" : type.substringToIndex(index)
             ]
             menu_array.append(menu)

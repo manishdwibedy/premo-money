@@ -56,8 +56,8 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
                 self.menu_list = [[String:String]]()
                 for menu in menu_list{
                     let menu_data: [String:String] = [
-                        "name" : menu["item"]!,
-                        "description" : menu["desc"]!,
+                        "name" : menu["name"]!,
+                        "description" : menu["description"]!,
                         "image" : "image URL",
                         "type": menu["type"]!
                     ]
@@ -217,6 +217,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             if menu["name"] == menuName{
                 self.filteredRows.removeAtIndex(index)
                 deleteCount += 1
+                break
             }
             index += 1
         }
@@ -226,11 +227,12 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             if menu["name"] == menuName{
                 self.menu_list.removeAtIndex(index)
                 deleteCount += 1
-                self.db_ref.child("user_info/\(uid!)/menu/\(index - 1)").removeValue()
+                break
             }
             index += 1
         }
         if deleteCount == 2{
+            self.db_ref.child("user_info/\(uid!)/menu").setValue(self.menu_list)
             tableView.reloadData()
             return true
         }
