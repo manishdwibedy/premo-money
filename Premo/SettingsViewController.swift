@@ -46,9 +46,6 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         })
         
         dob.delegate = self
-        username.text = "manish.dwibedy"
-        dob.text = "April 17, 1989"
-        address.text = "2656 Ellandale Pl.\n Apt #8\n Los Angeles, CA 90007 "
     }
     
     override func didReceiveMemoryWarning() {
