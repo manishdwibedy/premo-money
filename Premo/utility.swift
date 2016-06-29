@@ -103,6 +103,10 @@ class Util{
         return "\(partyID)"
     }
     
+    /*!
+     * @discussion Adding the user's address's latitude and longitude in the DB
+     * @param user_data - user's information dictionary
+     */
     static func getCoordinates(user_data: [String:String], uid: String, db_ref: FIRDatabaseReference){
         let geocoder = CLGeocoder()
         
